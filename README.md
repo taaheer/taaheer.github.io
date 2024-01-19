@@ -1,4 +1,11 @@
-### Hi there 👋
+### Hi
+
+## I am Taaheer Labbe
+### a passionate to be a computer scienctist. This is my GitHub profile.
+
+- I am familar with C++ and I have created QPad using C++ and Qt Widgets.
+- I am currently learning Math and Qt Framework as Math is important to be computer scientist and Qt Framework is good gui with C++ which I am familiar with.
+- You can view my website [taaheer.github.io](https://taaheer.github.io) to know about my projects or my [resume](https://taaheer.github.io).
 
 <!--
 **taaheer/taaheer** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
