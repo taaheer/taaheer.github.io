@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    color: white;
+}
+
+.left-section, .right-section{
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 0.625rem rgb(255, 215, 0);
+    margin: 0 3%;
+    border-radius: 0 0.625rem;
+    outline: 2px solid #FFA500;    
+}
+
+h1{
+    color: #FFD700;
+    border-bottom: 0.125rem solid #FFD700;
+}
+
+p{
+    font-size: 125%;
+    padding: 0.625rem;
+    margin: 0 0.625rem;
+}
