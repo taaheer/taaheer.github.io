@@ -11,6 +11,6 @@
   
       // Load header and footer
       window.onload = function() {
-        loadHTML('Common/Html/common-header.html', 'header');
-        loadHTML('Common/Html/common-footer.html', 'footer');
+        loadHTML('https://raw.githubusercontent.com/taaheer/taaheer.github.io/main/Common/Html/common-header.html', 'header');
+        loadHTML('https://raw.githubusercontent.com/taaheer/taaheer.github.io/main/Common/Html/common-footer.html', 'footer');
       };
