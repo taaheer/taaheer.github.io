@@ -3,6 +3,22 @@ body, h1, h2, p, ul, li{
     padding: 0;
 }
 
+::-webkit-scrollbar {
+    width: 1.5px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #FFD700; 
+}
+
+html {
+    scrollbar-color: #FFD700 black; 
+}
+  
+html {
+    scrollbar-width: thin;
+}
+
 body{
     background-image: url(../Image/Background.jpg);
     background-size: cover;
