@@ -11,6 +11,6 @@
   
       // Load header and footer
       window.onload = function() {
-        loadHTML('common/Html/common-header.html', 'header');
-        loadHTML('common/Html/common-footer.html', 'footer');
+        loadHTML('Common/Html/common-header.html', 'header');
+        loadHTML('Common/Html/common-footer.html', 'footer');
       };
