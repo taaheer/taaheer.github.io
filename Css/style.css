@@ -18,3 +18,9 @@ h1{
     color: #FFD700;
     border-bottom: 0.125rem solid #FFD700;
 }
+
+p{
+    font-size: 125%;
+    padding: 0.625rem;
+    margin: 0 0.625rem;
+}

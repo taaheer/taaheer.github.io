@@ -62,12 +62,6 @@ a{
     color: #FFD700;
 }
 
-p{
-    font-size: 125%;
-    padding: 0.625rem;
-    margin: 0 0.625rem;
-}
-
 a{
     text-decoration: none;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
