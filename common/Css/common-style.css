@@ -34,3 +34,10 @@ header{
     letter-spacing: 0.1rem;
     font-family: 'Orbitron', sans-serif;
 }
+
+footer{
+    color: white;
+    text-align: center;
+    padding: 1.5%;
+    font-size: 87.5%;
+}
