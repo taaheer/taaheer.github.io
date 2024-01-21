@@ -51,11 +51,11 @@ header{
     font-family: 'Orbitron', sans-serif;
 }
 
-footer{
+#footer-text{
     color: white;
     text-align: center;
     padding: 1.5%;
-    font-size: 87.5%;
+    font-size: 100%;
 }
 
 a{
