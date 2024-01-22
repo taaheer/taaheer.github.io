@@ -24,3 +24,16 @@ p{
     padding: 0.625rem;
     margin: 0 0.625rem;
 }
+
+@media (max-width: 767px){
+    body {
+        background-attachment: fixed;
+    }
+
+    p{
+        font-size: 115%;
+        padding: 0.2rem;
+        margin: 0 0rem;
+    }
+    
+}
