@@ -164,7 +164,7 @@ h2{
     padding: 1%;
 }
 
-#modal-contact h3, #modal-contact h2, #modal-contact p{
+#modal-contact h3, #modal-contact h2{
     font-family: 'Raleway', sans-serif;
     padding: 0.5%;
     font-size: 150%;
@@ -183,6 +183,13 @@ a{
 
 a:hover{
     text-decoration: none;
+}
+
+#modal-about p, #modal-contact p{
+    padding: 0.5%;
+    margin: 0.625em;
+    font-size: 2.25em;
+    font-family: "Actor", sans-serif;
 }
 
 @media (max-width: 1048px) {

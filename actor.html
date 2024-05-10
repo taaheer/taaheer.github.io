@@ -30,17 +30,33 @@
                     <h3 id="title">Pragmatic Actor / Programmer</h3>
                     <p id="introduction">I am Taaheer Labbe and I am an Actor, Computer Programmer from Navi Mumbai, Maharashtra, India</p>
                     <ul>
+                        <li><button class="modal-button" data-modal="about">About</button></li>
                         <!--
-                            <li><button >About</button></li>
                             <li><button>Resume</button></li>
+                            <li><button class="modal-button" data-modal="videos">Videos</button></li>
                         -->
-                        <li><button class="modal-button" data-modal="videos">Videos</button></li>
                         <li><button class="modal-button" data-modal="photos">Photos</button></li>
                         <li><button class="modal-button" data-modal="contact">Contact</button></li>
                     </ul>
                 </div>
-                <img src="taaheer-image.jpg" alt="My Image"/>
+                <img src="images/Taaheer headshot.jpeg" loading="lazy" alt="My Image"/>
             </section>
+
+            <dialog id="modal-about" class="modal">
+                <div class="modal-content">
+                    <h2>About</h2>
+                    <section class="about-container">
+                        <article>
+                            <p><strong>Taaher Labbe</strong> is an actor from Navi Mumbai, Maharashtra, India.</p>
+                            <p>He has participated in numerous dramas and stage performances during his school years and has also worked as an extra on camera.</p>
+                            <p>His performances on stage and in school dramas left a lasting impression on both fellow actors and audience members, creating fun, laughed and cherished memories for all involved.</p>
+                            <p>He is a computer programmer with extensive technological knowledge, and he designed this website by himself. And if you have suggestions or ideas, feel free to message him.</p>
+                            <p>Apart from spending times with computers, he also works out to improve his strength and practice parkour to improve his speed and agility.</p>
+                            <p>He likes to read books as well; currently, he is reading one of the great martial arts and philosophy books, <em>'Tao of Jeet Kune Do'</em> by the legendary martial artist and actor Bruce Lee.</p>                        </article>
+                    </section>
+                </div>
+                <button class="close">Close</button>
+            </dialog>
 
             <dialog id="modal-videos" class="modal">
                 <div class="modal-content">
@@ -56,7 +72,10 @@
                 <div class="modal-content">
                     <h2>Photos</h2>
                     <section class="photos-section">
-                        <p>Photos coming soon</p>
+                        <img src="images/Taaheer image 1.png" loading="lazy">
+                        <img src="images/Taaheer image 2.jpeg" loading="lazy">
+                        <img src="images/Taaheer image 3.jpeg" loading="lazy">
+                        <img src="images/Taaheer image 4.jpeg" loading="lazy">
                     </section>
                     <button class="close">Close</button>
                 </div>
