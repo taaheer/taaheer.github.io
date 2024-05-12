@@ -191,35 +191,35 @@ a:hover{
     text-decoration: none;
 }
 
-#modal-about p, #modal-contact p{
+p{
+    font-size: 1.5em;
     padding: 0.5%;
     margin: 0.625em;
-    font-size: 2.25em;
     font-family: "Actor", sans-serif;
 }
 
 :root {
-    --loading-grey: #ededed;
+  --loading-grey: #ededed;
+}
+
+.loading img {
+  background-color: var(--loading-grey);
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, .5) 50%,
+    rgba(255, 255, 255, 0) 60%
+  ) var(--loading-grey);
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  animation: 1s loading ease-in-out infinite;
+}
+
+@keyframes loading {
+  to {
+    background-position-x: -20%;
   }
-  
-  .loading img {
-    background-color: var(--loading-grey);
-    background: linear-gradient(
-      100deg,
-      rgba(255, 255, 255, 0) 40%,
-      rgba(255, 255, 255, .5) 50%,
-      rgba(255, 255, 255, 0) 60%
-    ) var(--loading-grey);
-    background-size: 200% 100%;
-    background-position-x: 180%;
-    animation: 1s loading ease-in-out infinite;
-  }
-  
-  @keyframes loading {
-    to {
-      background-position-x: -20%;
-    }
-  }
+}
 
 @media (max-width: 1048px) {
     .container{
@@ -241,5 +241,5 @@ a:hover{
     #introduction{
         font-size: 1rem;
     }
-
+    
 }
