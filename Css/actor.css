@@ -48,9 +48,9 @@ img {
 }
 
 img::before {
-    content: '';
-    width: 100%;
-    height: calc(100% + 10px);
+    content: 'Failed to load';
+    width: 100%;    
+    height: 100%;
     background-color: #ccc;
     border-radius: 10px;
     position: absolute;
