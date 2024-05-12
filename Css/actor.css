@@ -199,6 +199,10 @@ a:hover{
 }
 
 @media (max-width: 1048px) {
+    .container{
+        margin: 1%;
+    }
+
     #section-1{
         padding: 1%;
         flex-direction: column-reverse;
