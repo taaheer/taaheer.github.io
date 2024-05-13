@@ -188,7 +188,7 @@ p{
     rgba(255, 255, 255, 0) 60%
   ) var(--loading-colour);
   background-size: 200% 100%;
-  background-position-x: 180%;
+  background-position: 180% 0;
   animation: 1s loading ease-in-out infinite;
 }
 
