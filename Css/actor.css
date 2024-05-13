@@ -81,18 +81,13 @@ img::before {
 #title{
     text-transform: uppercase;
     color: #474747;
-    font-family: sans-serif;
     letter-spacing: 0.25rem;
     font-weight: 300;
 }
 
 #introduction{
     color: #474747;
-    font-family: sans-serif;
-    letter-spacing: 0.025rem;
-    line-height: 1.875;
-    font-weight: 300;
-    width: 95%;
+    line-height: 1.5em;
 }
 
 #section-1 ul li {
@@ -151,12 +146,6 @@ button:hover:after {
 
 .modal-content{
     text-align: center; 
-}
-
-#modal-contact h3, #modal-contact h2{
-    font-family: sans-serif;
-    padding: 0.5%;
-    font-size: 150%;
 }
 
 .photos-section img{
