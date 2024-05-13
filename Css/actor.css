@@ -7,6 +7,7 @@
     --box-background-colour: #fff;
     --container-radius: 0.5em;
     --loading-colour: #ededed;
+    --text-margin: 1rem;
 }
 
 body, h1, h2, p, ul, li, div{
@@ -70,6 +71,16 @@ img::before {
     flex: 1;
 }
 
+h1{
+    font-size: 3.5em;
+    margin: var(--text-margin);
+}
+
+h2{
+    font-size: 1.75em;
+    margin: var(--text-margin);
+}
+
 #name{
     text-transform: uppercase;
     color: #474747;
@@ -81,12 +92,14 @@ img::before {
 #title{
     text-transform: uppercase;
     color: #474747;
+    font-size: 1.5em;
     letter-spacing: 0.25rem;
     font-weight: 300;
 }
 
 #introduction{
     color: #474747;
+    font-size: 1em;
     line-height: 1.5em;
 }
 
@@ -165,7 +178,7 @@ a:hover{
 p{
     font-size: 1.5em;
     padding: 0.5%;
-    margin: 0.625em;
+    margin: var(--text-margin);
     font-family: "Actor", sans-serif;
 }
 
