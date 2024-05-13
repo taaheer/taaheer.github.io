@@ -71,8 +71,6 @@ img::before {
 }
 
 #name{
-    font-size: 3.4rem;
-
     text-transform: uppercase;
     color: #474747;
     font-family: sans-serif;
@@ -81,7 +79,6 @@ img::before {
 }
 
 #title{
-    font-size: 1.5rem;
     text-transform: uppercase;
     color: #474747;
     font-family: sans-serif;
@@ -97,14 +94,6 @@ img::before {
     line-height: 1.875;
     font-weight: 300;
     width: 95%;
-}
-
-#section-1 h1, #section-1 h3, #section-1 p, #section-1 ul {
-    margin-bottom: 5%; 
-}
-
-#section-1 h1, #section-1 h3, #section-1 p{
-    padding-left: 5%;
 }
 
 #section-1 ul li {
@@ -163,11 +152,6 @@ button:hover:after {
 
 .modal-content{
     text-align: center; 
-}
-
-h2{
-    font-family: sans-serif;
-    padding: 1%;
 }
 
 #modal-contact h3, #modal-contact h2{
@@ -232,9 +216,4 @@ p{
     #section-1 img {
         max-width: 100%;
     }
-
-    #introduction{
-        font-size: 1rem;
-    }
-    
 }
