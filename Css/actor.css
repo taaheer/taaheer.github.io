@@ -75,7 +75,7 @@ img::before {
 
     text-transform: uppercase;
     color: #474747;
-    font-family: 'Raleway', sans-serif;
+    font-family: sans-serif;
     letter-spacing: 0.5rem;
     font-weight: 700;
 }
@@ -166,12 +166,12 @@ button:hover:after {
 }
 
 h2{
-    font-family: 'Raleway', sans-serif;
+    font-family: sans-serif;
     padding: 1%;
 }
 
 #modal-contact h3, #modal-contact h2{
-    font-family: 'Raleway', sans-serif;
+    font-family: sans-serif;
     padding: 0.5%;
     font-size: 150%;
 }
