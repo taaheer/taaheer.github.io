@@ -35,7 +35,7 @@ body {
     max-width: 85%;
     background-color: light-dark(var(--box-background-colour), var(--dark-box-background-colour));
     border-radius: var(--container-radius);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px light-dark(rgba(0, 0, 0, 0.1), rgba(255, 215, 0));
     padding: 0.3%;
 }
 
@@ -157,7 +157,7 @@ button:hover:after {
     height: 100%;
     border: none;
     border-radius: 1%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px light-dark(rgba(0, 0, 0, 0.1), rgba(255, 215, 0));
 }
 
 .modal-content{
