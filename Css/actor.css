@@ -116,7 +116,7 @@ button{
     width: 95%;
     height: 2.3em;
     margin: 0.5em;
-    background: light-dark(var(--dark-box-background-colour), var(--box-background-colour));
+    background: light-dark(var(--dark-box-background-colour), var(--dark-front-text-colour));
     color: light-dark(var(--box-background-colour), var(--dark-box-background-colour));
     border: none;
     border-radius: 0.625em;
