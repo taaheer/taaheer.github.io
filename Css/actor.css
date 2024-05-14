@@ -5,12 +5,12 @@
 :root{
     --background-colour: #f0f0f0;
     --dark-background-colour: #303030;
-    --box-background-colour: #fff;
-    --dark-box-background-colour: black;
+    --box-background-colour: white ;
+    --dark-box-background-colour: #121212;
     --front-text-colour: #474747;
-    --dark-front-text-colour: #c0c0c0;
+    --dark-front-text-colour: #FFA700;
     --container-radius: 0.5em;
-    --loading-colour: #ededed;
+    --loading-colour: light-dark(#ededed, #ffa500);
     --text-margin: 1rem;
     color-scheme: light dark;
 }
