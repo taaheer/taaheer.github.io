@@ -31,7 +31,7 @@ body {
     background-color: light-dark(var(--background-colour), var(--dark-background-colour));
 }
 
-.container {
+main {
     max-width: 85%;
     background-color: light-dark(var(--box-background-colour), var(--dark-box-background-colour));
     border-radius: var(--container-radius);
@@ -207,7 +207,7 @@ p{
 }
 
 @media (max-width: 1048px) {
-    .container{
+    main{
         margin: 1%;
     }
 
@@ -223,7 +223,7 @@ p{
 
 
 @media (max-width: 768px){
-    .container{
+    main{
         max-width: 100%;
     }
 }
