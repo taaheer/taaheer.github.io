@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /Common/
+Disallow: /Css/
+Disallow: /Javascripts/
+Disallow: /images/
+
+
+Sitemap: https://taaheer.github.io/sitemap.xml
