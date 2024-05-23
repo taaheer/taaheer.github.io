@@ -12,6 +12,7 @@
     --container-radius: 0.5em;
     --loading-colour: light-dark(#ededed, #ffa500);
     --text-margin: 1rem;
+    --box-shadow: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 215, 0));
     color-scheme: light dark;
 }
 
@@ -35,7 +36,7 @@ main {
     max-width: 85%;
     background-color: light-dark(var(--box-background-colour), var(--dark-box-background-colour));
     border-radius: var(--container-radius);
-    box-shadow: 0 2px 5px light-dark(rgba(0, 0, 0, 0.1), rgba(255, 215, 0));
+    box-shadow: 0 2px 5px var(--box-shadow);
     padding: 0.3%;
 }
 
@@ -157,7 +158,7 @@ button:hover:after {
     height: 100%;
     border: none;
     border-radius: 1%;
-    box-shadow: 0 2px 5px light-dark(rgba(0, 0, 0, 0.1), rgba(255, 215, 0));
+    box-shadow: 0 2px 5px var(--box-shadow);
 }
 
 .modal-content{
