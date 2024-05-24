@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+:root{
+    --name-size: 3.5em;
+    --text-alinged: center;
+}
+
+body, h1, h2, p, ul, li, div{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body{
+    background-image: url('../Image/Background.jpg');
+}
+
+header{
+    text-align: var(--text-alinged);
+    font-family: Orbitron;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+.name{
+    font-size: var(--name-size);
+    background: linear-gradient(to bottom, #F2E750, #D9A036, #8C6723);
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 0.3px #403014;
+}
+
+.first-ch
+{
+    font-size: 120%;
+}
+
+.title{
+    font-size: calc(var(--name-size) / 2.5);
+    color: white;
+    letter-spacing: 0.25rem;
+    font-weight: 300;
+}
+
+.gold{
+    color: gold;
+}
+
+footer{
+    text-align: var(--text-alinged);
+    color: darkgray;
+}
+
+@media(max-width: 1024px){
+    :root{
+        --name-size: 2em;
+    }
+}
