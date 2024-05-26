@@ -18,6 +18,7 @@ main {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;    
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 section {
@@ -36,6 +37,14 @@ ul{
     justify-content: center;
     list-style: none;
 }
+
+button{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    height: 2.5em;
+    border-radius: 1em;
+}
+
 
 footer {
     padding: 0.5rem 0;    
