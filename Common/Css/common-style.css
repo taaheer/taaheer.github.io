@@ -50,6 +50,10 @@ header{
     color: gold;
 }
 
+a{
+    color: gold;
+}
+
 footer{
     text-align: var(--text-alinged);
     color: darkgray;
