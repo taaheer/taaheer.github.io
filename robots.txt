@@ -1,8 +1,5 @@
 User-agent: *
-Disallow: /Common/
-Disallow: /Css/
-Disallow: /Javascripts/
-Disallow: /images/
+Disallow: /Common/Html
 
 
 Sitemap: https://taaheer.github.io/sitemap.xml
