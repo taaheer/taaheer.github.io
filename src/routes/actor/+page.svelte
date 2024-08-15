@@ -101,7 +101,7 @@
 
 <Seo title={title} meta={meta} og={og} twitter={twitter} url={url}/>
 
-<svelte:head>       
+<svelte:head>
     {@html `<script type="application/ld+json">
     {
       "@context": "https://schema.org",
