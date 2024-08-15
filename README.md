@@ -1,23 +1,38 @@
-### Hi
+# create-svelte
 
-## I am Taaheer Labbe
-### a passionate to be a computer scienctist. This is my GitHub profile.
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
-- I am familar with C++ and I have created QPad using C++ and Qt Widgets.
-- I am currently learning Math and Qt Framework as Math is important to be computer scientist and Qt Framework is good gui with C++ which I am familiar with.
-- You can view my website [taaheer.github.io](https://taaheer.github.io) to know about my projects or my [resume](https://taaheer.github.io).
+## Creating a project
 
-<!--
-**taaheer/taaheer** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+If you're seeing this, you've probably already done this step. Congrats!
 
-Here are some ideas to get you started:
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+# create a new project in my-app
+npm create svelte@latest my-app
+```
+
+## Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

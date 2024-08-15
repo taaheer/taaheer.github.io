@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /Common/Html/
-
-
-Sitemap: https://taaheer.github.io/sitemap.xml
