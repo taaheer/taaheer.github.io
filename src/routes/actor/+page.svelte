@@ -86,7 +86,7 @@
   });
 
   const imageModules = import.meta.glob(
-    '/src/routes/actor/images/*.{avif,jpeg,jpg,png,webp}',
+    './*.{avif,jpeg,jpg,png,webp}',
     {
       eager: true,
       query: {
@@ -146,7 +146,7 @@
       {/each}
     </div>
   </div>
-  <enhanced:img src="./Taaheer-headshot.avif" alt="An alt text" class="headshot-image"/>  
+  <enhanced:img src="./images/headshot/Taaheer-headshot.avif" alt="An alt text" class="headshot-image"/>  
 </section>
 
 {#each modals as modal}
@@ -174,10 +174,12 @@
     {#if modal.title == "Contact"}
       <p>You can contact me throught</p>
       {#each contact as contact}
-        {#if contact.type != "Location"}
-          <p>{contact.type}: <a href={contact.value}>{contact.value}</a></p>
-        {/if}
-      {/each}
+      {#if contact.type == "Email"}
+        <p>{contact.type}: <a href={`mailto:${contact.value}`}>{contact.value}</a></p>
+      {:else if contact.type != "Location"}
+        <p>{contact.type}: <a href={contact.value}>{contact.value}</a></p>
+      {/if}
+    {/each}
     {/if}
     <div class="close-btn-div">
       <button class="close">Close</button>
