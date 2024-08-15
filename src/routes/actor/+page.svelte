@@ -163,7 +163,7 @@
     {/each}
     {/if}
     {#if modal.title == "Contact"}
-      <p>You can contact me throught</p>
+      <p>You can contact me through</p>
       {#each contact as contact}
       {#if contact.type == "Email"}
         <p>{contact.type}: <a href={`mailto:${contact.value}`}>{contact.value}</a></p>

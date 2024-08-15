@@ -81,7 +81,7 @@ export const projects = [
 ];
 
 export const techAbout = [
-    "I am Taaheer Labbe, a " + primaryCareer + " and an " + secondaryCareer + ". Since childhood I had great interest in computers and technologies, specially due to video games and internet.", 
-    "Due to financial problem I could not continue my studies but that does not stop to self learn, by myself I learn low level programming and C++ and also learn web development to I could create my own website and host.",
-    "I have made some open source project such as CMaker and MOS-6502 emulation to prove my skill and authenticity which you can see in my project section or on my github."
+    "I am Taaheer Labbe, a " + primaryCareer + " and an " + secondaryCareer + ". Since childhood I had great interest in computers and technology, particularly due to video games and the internet.", 
+    "Due to financial problems, I was unable to continue my studies. However, this does not stop to self learn. I taught myself low level programming and C++, and also learn web development to I could create and host my own website.",
+    "I have worked on some open-source projects, such as CMaker and MOS-6502 emulation, to demonstrate my skills and authenticity. You can see these projects in the project section or on my GitHub."
 ];
