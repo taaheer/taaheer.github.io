@@ -86,7 +86,7 @@
   });
 
   const imageModules = import.meta.glob(
-    './*.{avif,jpeg,jpg,png,webp}',
+    '/src/routes/actor/images/*.{avif,jpeg,jpg,png,webp}',
     {
       eager: true,
       query: {
@@ -94,13 +94,6 @@
       }
     }
   );
-
-  // Extract image data for use in your component
-  let images = Object.entries(imageModules).map(([path, module]) => ({
-    source: module.default,
-    alt: path.split('/').pop().split('.')[0] // Extract file name without extension for alt text
-  }));
-
 
   import { page } from "$app/stores"
   const url = $page.url.href
@@ -159,9 +152,7 @@
     <div class="gallery">
       {#each Object.entries(imageModules) as [_path, module]}
       <div class="gallery-item">
-        <a href={_path}>
-          <enhanced:img class="photos" src={module.default} alt="{_path.split('/').pop().replace(/\.[^/.]+$/, "")}" loading="lazy" />
-        </a>
+        <enhanced:img class="photos" src={module.default} alt="{_path.split('/').pop().replace(/\.[^/.]+$/, "")}" loading="lazy" />
       </div>
       {/each}
     </div>
