@@ -13,7 +13,7 @@ export const meta = [
 export const og = [
     {property: 'og:title', content: title},
     {property: 'og:type', content: 'website'},
-    {property: 'og:image', content: {previewImage}},
+    {property: 'og:image', content: previewImage},
     {property: 'og:description', content: description},
 ]
 
@@ -21,5 +21,5 @@ export const twitter = [
     {name: 'twitter:card', content: 'summary_large_image'},
     {name: 'twitter:title', content: title},
     {name: 'twitter:description', content: description},
-    {name: 'twitter:image', content: {previewImage}}
+    {name: 'twitter:image', content: previewImage}
 ]
