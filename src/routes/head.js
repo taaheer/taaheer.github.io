@@ -1,4 +1,4 @@
-import { fullname, primaryCareer, secondaryCareer } from "../lib/data/personalInfo"
+import { fullname, primaryCareer, secondaryCareer, previewImage } from "../lib/data/personalInfo"
 
 export const title = "Homepage - " + fullname
 const description = "Homepage of " + fullname + " a " + primaryCareer + " and an " + secondaryCareer + ". Discover his work, projects, and latest updates."
@@ -13,7 +13,7 @@ export const meta = [
 export const og = [
     {property: 'og:title', content: title},
     {property: 'og:type', content: 'website'},
-    {property: 'og:image', content: ''},
+    {property: 'og:image', content: {previewImage}},
     {property: 'og:description', content: description},
 ]
 
@@ -21,5 +21,5 @@ export const twitter = [
     {name: 'twitter:card', content: 'summary_large_image'},
     {name: 'twitter:title', content: title},
     {name: 'twitter:description', content: description},
-    {name: 'twitter:image', content: ''}
+    {name: 'twitter:image', content: {previewImage}}
 ]

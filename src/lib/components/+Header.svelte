@@ -1,5 +1,5 @@
 <script>
-    import {fullname, primaryCareer, secondaryCareer} from "../data/personalInfo";
+    import {fullname, primaryCareer, secondaryCareer, ternaryCareer} from "../data/personalInfo";
     import { onMount } from "svelte";
     import { blur } from "svelte/transition";
 
@@ -13,7 +13,7 @@
 
 <h1>{fullname}</h1>
 {#if startAnimation}
-<h2 transition:blur>{primaryCareer} and {secondaryCareer}</h2>
+<h2 transition:blur>{primaryCareer} - {secondaryCareer} - {ternaryCareer}</h2>
 {/if}
 
 <style>
@@ -32,11 +32,11 @@
         background: linear-gradient(to bottom, #F2E750, #D9A036, #8C6723);
         background-clip: text;
         color: transparent;
-        -webkit-text-stroke: 0.3px #403014;
+        -webkit-text-stroke: 0.4px #403014;
     }
     h2{
         font-size: 1em;
-        letter-spacing: 0.25rem;
+        letter-spacing: 0.32rem;
         font-weight: 300;
     }
     @media (max-width: 768px) {
@@ -44,7 +44,7 @@
             font-size: 2em;
         }
         h2{
-            font-size: 0.9em;
+            font-size: 1em;
         }
     }
 </style>

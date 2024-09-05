@@ -1,10 +1,13 @@
 <script>
-  import { fullname, primaryCareer, secondaryCareer, address, contact, gender, birthDate } from "../../lib/data/personalInfo";
+  import { fullname, primaryCareer, secondaryCareer, ternaryCareer, address, contact, gender, birthDate, age, heightinCm, heightinFeetInches } from "../../lib/data/personalInfo";
   import { modals } from "./data.js";
   import { onMount } from 'svelte';
   import {title, meta, og, twitter, type} from "./heads.js";
   import Seo from "../../lib/components/+Seo.svelte";
 
+  import YoutubeIcon from "../../lib/components/+YoutubeIcon.svelte";
+  import Headphone from "../../lib/components/+Headphone.svelte"
+  import Camera from "../../lib/components/+Camera.svelte"
 
   let modalElements = [];
 
@@ -30,7 +33,7 @@
 
   onMount(() => {
     document.body.classList.add('no-background');
-    
+
     modalElements = modals.map((modal) => document.getElementById(modal.title));
 
     // Open any modals that were open before the page was refreshed
@@ -128,11 +131,10 @@
     </script>`}
 </svelte:head>
 
-<section class="main-content">
   <div class="text">
     <h1>{fullname}</h1>
-    <h2>{secondaryCareer} - {primaryCareer}</h2>
-    <p>I am {fullname} and I am an {secondaryCareer} and {primaryCareer} from {address}</p>
+    <h2>{secondaryCareer} - {ternaryCareer} - {primaryCareer}</h2>
+    <p>I am {fullname} and I am an {secondaryCareer}, {ternaryCareer} and {primaryCareer} from {address}</p>
     <div class="multi-button">
       {#each modals as modal}
         <button data-modal="{modal.title}">{modal.title}</button>
@@ -140,7 +142,6 @@
     </div>
   </div>
   <enhanced:img src="./images/headshot/Taaheer-headshot.avif" alt="An alt text" class="headshot-image"/>  
-</section>
 
 {#each modals as modal}
 <section>
@@ -158,19 +159,41 @@
     </div>
     {/if}
     {#if modal.title == "About"}
-    {#each modal.points as point}
-      <p>{point.point}</p>
-    {/each}
+      <p>Name: {fullname}</p>
+      <p>Age: {age}</p>
+      <p>Born: {birthDate}</p>
+      <p>Height: {heightinCm} cm / {heightinFeetInches.feet} Feet {heightinFeetInches.inches} Inches</p>
+      <p>Address: {address}</p>
+    {/if}
+    {#if modal.title == "Media"}
+    <div class="media">
+      {#each modal.pages as page}
+      <section class="media">
+        <a href={page.link}>
+          <h3>{page.title}</h3>
+          {#if page.title == "Videos"}
+            <YoutubeIcon/>
+          {:else if page.title == "Photos"}
+            <Camera/>
+          {:else if page.title == "Audio"}
+            <Headphone/>
+          {/if}
+        </a>
+        </section>
+        {/each}
+    </div>
     {/if}
     {#if modal.title == "Contact"}
       <p>You can contact me through</p>
-      {#each contact as contact}
-      {#if contact.type == "Email"}
+      <div class="contact">
+        {#each contact as contact}
+        {#if contact.type == "Email"}
         <p>{contact.type}: <a href={`mailto:${contact.value}`}>{contact.value}</a></p>
-      {:else if contact.type != "Location"}
+        {:else if contact.type != "Location"}
         <p>{contact.type}: <a href={contact.value}>{contact.value}</a></p>
-      {/if}
-    {/each}
+        {/if}
+        {/each}
+      </div>
     {/if}
     <div class="close-btn-div">
       <button class="close">Close</button>
@@ -179,32 +202,17 @@
 </section>
 {/each}
 
+
 <style>
-  :global(body.no-background) {
-    background: none;
-    background-color: #f0f0f0;
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
-  }
-  * {
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  section {
-    max-width: 85%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 0.5em;
-  }
+  
+
+
+
   .text {
     margin: 1em;
   }
   img {
-    border-radius: 0 0.5em 0.5em 0;
+    border-radius: 0 0.4em 0.4em 0;
     display: flex;
     width: 100%;
     height: 100%;
@@ -263,16 +271,33 @@
   .multi-button button:active {
     transform: translateY(var(--border-size));
   }
-  dialog {
-    background-color: white;
-    border: none;
-    padding: 1rem;
-    border-radius: 0.5em;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+  .media {
+  display: flex;
+  margin: 0.64em;
+}
+
+  .media a {
+    color: black;
+    display: grid; 
+    place-items: center; 
+    padding: 1em; 
+    transition: transform .2s; 
+    transition: filter 0.3s ease;
   }
-  dialog::backdrop{
-    background-color:rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(5px);
+
+  .media a:hover{
+    background-color: white;
+    transform: scale(1.1);
+    filter: invert(1);
+  }
+  .contact a:hover{
+    background-color: black;
+    color: white;
+  }
+
+  h3{
+    font-size: 2em;
   }
   .close {
     align-items: center;
@@ -280,7 +305,7 @@
     background-color: var(--color-secondary);
     color: var(--color-primary);
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 1rem;
     border-radius: 0.25em;
     cursor: pointer;
     transition: background-color var(--duration) var(--ease);
@@ -310,32 +335,38 @@
   .modal-title{
     display: flex;
     justify-content: center;
-    border-bottom: 0.125rem solid black;    
-    margin-bottom: 1em;
+    border-bottom: 0.16rem solid black;    
+    margin-bottom: 1.8em;
   }
 
   h1, h2{
     text-transform: uppercase;
   }
+  
+  .text h1, .text h2, .text p{
+    margin: auto;
+    margin-bottom: 1rem;
+  }
 
   h1{
     font-size: 2.9em;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.4rem;
   }
 
   h2{
     font-weight: 300;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.4rem;
+  }
+
+  a{
+    color: black;
   }
 
   @media (max-width: 849px) {
     .gallery {
       grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
     }
-    .main-content{
-      display: flex;
-      flex-direction: column-reverse;
-    }
+
     img{
       border-radius: 0.5em 0.5em 0 0;
     }
@@ -345,9 +376,14 @@
       place-content: center;
       font-size: 2.3em;
     }
-    section {
-    max-width: 100%;
 
-    }
+    h2{
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+   }
+   .media{
+    display: flex;
+    flex-wrap: wrap;
+   }
   }
 </style>

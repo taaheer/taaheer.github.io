@@ -64,7 +64,7 @@
     .main {
         scroll-snap-type: y mandatory;
         overflow-y: scroll;
-        height: 100svh;
+        height: 96svh;
         display: grid;
         grid-auto-rows: 100dvh; 
         overflow-x: hidden;

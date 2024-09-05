@@ -99,10 +99,14 @@
     <div class="content">
         {#each categories as category}
         <div class="category">
-            <h3>{category.title}:</h3>
-            {#each category.items as item}
-            <a href={item.link}>{item.name}</a>,
-            {/each}
+            <li>
+                <h3>{category.title}</h3>:
+                <span>
+                {#each category.items as item}
+                    <a href={item.link}>{item.name}</a>, <span></span> 
+                {/each}
+                </span>
+            </li>
         </div>
         {/each}
     </div>
@@ -110,50 +114,42 @@
 </div>
   
 
-  
-
 <style>
     .wrapper{
         display: grid;
-        grid-template-columns: 48% 50%;
+        grid-template-columns: auto auto;
 
         background-color: rgba(0, 0, 0, 0.7);
-        box-shadow: 0 0 0.625rem rgb(255, 215, 0);
+        box-shadow: 0 0 1em rgb(255, 215, 0);
 
-        margin: 1em;
-        margin-right: 1.8em;
-        border-radius: 0.625rem;    
+        border-radius: 1rem;
     }
     .content{
-        padding-left: 2rem;
-    }
-    .head-text{
-        padding-left: 1rem;
+        margin: 2em;
     }
     h2{
         font-size: 1.5rem;
         color: gold;
-        border-bottom: 0.125rem solid #FFD700;    
+        border-bottom: 0.16rem solid #FFD700;
+        margin: 0.64em;    
     }
     .category {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
+        margin: 1em; 
+        margin-left: 0;
     }
-    a{
-        margin-left: 0.5em;
+    .content 
+    {
+        list-style: none;
+        padding: 0;
     }
+
+.category h3 {
+    display: inline;
+}
     @media (max-width: 600px){
         .wrapper{
             grid-template-columns: auto;
             margin: auto;
-        }
-        .content{
-            padding: 0 20px 1em 20px;
-        }
-        .head-text{
-            padding-left: 5px;
-            padding-right: 5px;
         }
     }
   

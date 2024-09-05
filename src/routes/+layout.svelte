@@ -8,6 +8,14 @@
 <style>
     :global(a){
         color: gold;
+        transition: 0.3s;
+    }
+    :global(a:hover)
+    {
+        color: black;
+        background-color: gold;
+        border-radius: 0.2em;
+        text-decoration: none;
     }
     footer {
         text-align: center;
