@@ -11,6 +11,26 @@
 
   let modalElements = [];
 
+  // Function to store modal open state in localStorage
+  const setModalState = (modalId, isOpen) => {
+    localStorage.setItem(`modalState-${modalId}`, isOpen ? 'open' : 'closed');
+  };
+
+  // Function to get modal open state from localStorage
+  const getModalState = (modalId) => {
+    return localStorage.getItem(`modalState-${modalId}`) === 'open';
+  };
+
+  // Function to store modal scroll position in localStorage
+  const setModalScrollPosition = (modalId, scrollPosition) => {
+    localStorage.setItem(`modalScroll-${modalId}`, scrollPosition);
+  };
+
+  // Function to get modal scroll position from localStorage
+  const getModalScrollPosition = (modalId) => {
+    return localStorage.getItem(`modalScroll-${modalId}`) || 0;
+  };
+
   onMount(() => {
     document.body.classList.add('no-background');
 
@@ -51,6 +71,15 @@
 
     modalButtons.forEach(button => button.addEventListener("click", handleButtonClick));
     closeButtons.forEach(button => button.addEventListener("click", handleCloseClick));
+
+    // Save modal scroll position before the page is refreshed
+    window.addEventListener("beforeunload", () => {
+      modalElements.forEach(modal => {
+        if (modal) {
+          setModalScrollPosition(modal.id, modal.scrollTop);
+        }
+      });
+    });
 
     return () => {
       document.body.classList.remove('no-background');
@@ -112,7 +141,7 @@
       {/each}
     </div>
   </div>
-  <enhanced:img src="./images/headshot/Taaheer-headshot.avif" alt="An alt text" class="headshot-image"/>  
+  <enhanced:img src="./headshot/Taaheer-headshot.avif" alt="An alt text" class="headshot-image"/>  
 
 {#each modals as modal}
 <section>
