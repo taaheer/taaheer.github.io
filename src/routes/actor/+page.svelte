@@ -120,15 +120,6 @@
     <div class="modal-title">
       <h2>{modal.title}</h2>
     </div>
-    {#if modal.title == "Photo"}
-    <div class="gallery">
-      {#each Object.entries(imageModules) as [_path, module]}
-      <div class="gallery-item">
-        <enhanced:img class="photos" src={module.default} alt="{_path.split('/').pop().replace(/\.[^/.]+$/, "")}" loading="lazy" />
-      </div>
-      {/each}
-    </div>
-    {/if}
     {#if modal.title == "About"}
       <p>Name: {fullname}</p>
       <p>Age: {age}</p>

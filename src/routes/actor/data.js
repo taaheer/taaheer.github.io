@@ -4,9 +4,6 @@ export const modals = [
         title: "About",
     },
     {
-        title: "Photo"
-    },
-    {
         title: "Media",
         pages: [
             {title: 'Audio', link: './actor/audio'},
