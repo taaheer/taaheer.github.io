@@ -52,13 +52,32 @@
   
   
   
-  <section class="main-content">
-    <h1>Video</h1>
+  <section>
+    <div class="page-title">
+      <h1>Video</h1>
+    </div>
   </section>
   
 
   
   <style>
-    
+        .page-title{
+      display: flex;
+    justify-content: center;
+    border-bottom: 0.16rem solid black;
+    margin-bottom: 1.8em;
+    }
+    h1{
+    text-transform: uppercase;
+  }
+  h1{
+    letter-spacing: 0.4rem;
+    font-weight: 300;
+
+  }
+
+  section{
+    padding: 1em
+  }
   </style>
   

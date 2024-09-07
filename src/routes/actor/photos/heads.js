@@ -1,8 +1,8 @@
 import { fullname, primaryCareer, secondaryCareer } from "../../../lib/data/personalInfo"
 
-export const title = "Actor - " + fullname
-const description = "Actor portfolio of " + fullname + " a " + primaryCareer + " and an " + secondaryCareer + ". Take a look at his acting portfolio and his acting jounery."
-export const type = "CreativeWork"
+export const title = "Actor / Photos - " + fullname
+const description = "A gallery of photos showcasing " + fullname + " a " + primaryCareer + " and an " + secondaryCareer + ". "
+export const type = "WebPage"
 
 export const meta = [
     {name: 'theme-color', content: ''},

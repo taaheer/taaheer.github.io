@@ -82,8 +82,10 @@
   </svelte:head>
   
   
-  <section>
-    <h1>Audio</h1>
+<section>
+    <div class="page-title">
+      <h1>Audio</h1>
+    </div>
     
     <div class="audio-container">
       
@@ -130,6 +132,29 @@
     audio {
       width: 100%;
     }
+
+    .page-title{
+      display: flex;
+    justify-content: center;
+    border-bottom: 0.16rem solid black;
+    margin-bottom: 1.8em;
+    }
+    h1, h2{
+    text-transform: uppercase;
+  }
+  h1{
+    letter-spacing: 0.4rem;
+    font-weight: 300;
+
+  }
+
+  h2{
+    letter-spacing: 0.4rem;
+  }
+
+  section{
+    padding: 1em
+  }
   
     /* Responsive behavior */
     @media (max-width: 768px) {
