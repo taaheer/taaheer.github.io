@@ -96,6 +96,15 @@
         "name": "${fullname}",
         "url": "${url}"
       }
+      "image": [
+      ${Object.entries(imageMap).map(([alt, src], index) => `{
+        "@type": "ImageObject",
+        "url": "${src}",
+        "caption": "Photo ${index + 1}: ${alt}",
+        "width": "800",
+        "height": "600"
+      }`).join(',')}
+    ]
     }
     </script>`}
   </svelte:head>
