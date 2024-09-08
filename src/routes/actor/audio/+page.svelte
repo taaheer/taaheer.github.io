@@ -57,26 +57,8 @@
         "name": "${fullname}",
         "url": "${url}"
       },
-      "about": "Portfolio showcasing acting roles, headshots, and voice samples.",
+      "about": "Portfolio showcasing voice samples.",
       "genre": "Voice Acting",
-      "audio": [
-        {
-          "@type": "AudioObject",
-          "name": "Sample 1",
-          "description": "Description of the first audio sample.",
-          "contentUrl": "https://www.example.com/audio/sample1.mp3",
-          "duration": "PT1M30S",
-          "uploadDate": "2024-09-01"
-        },
-        {
-          "@type": "AudioObject",
-          "name": "Sample 2",
-          "description": "Description of the second audio sample.",
-          "contentUrl": "https://www.example.com/audio/sample2.mp3",
-          "duration": "PT2M00S",
-          "uploadDate": "2024-09-02"
-        }
-      ]
     }
     </script>`}
   </svelte:head>
