@@ -42,6 +42,10 @@
                     "@type": "WebPage",
                     "name": "Project List",
                     "url": "https://taaheer.github.io/projects"
+                }                {
+                    "@type": "WebPage",
+                    "name": "My Writes",
+                    "url": "https://taaheer.github.io/my-works"
                 }
                 ]
         }
