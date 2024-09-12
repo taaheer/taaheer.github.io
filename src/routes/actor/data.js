@@ -6,7 +6,7 @@ export const modals = [
     {
         title: "Media",
         pages: [
-            {title: 'Audio', link: './actor/audio'},
+            {title: 'Audio', link: './actor/voice'},
             {title: 'Photos', link: './actor/photos'},
             {title: 'Videos', link: './actor/videos'}
         ]

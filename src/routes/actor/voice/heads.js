@@ -1,6 +1,6 @@
 import { fullname, primaryCareer, secondaryCareer } from "../../../lib/data/personalInfo"
 
-export const title = "Actor / Audio - " + fullname
+export const title = "Actor / Voice - " + fullname
 const description = "Voice Acting portfolio of " + fullname + " a " + primaryCareer + " and an " + secondaryCareer + ". Take a look at his voice acting portfolio and his acting jounery."
 export const type = "WebPage"
 

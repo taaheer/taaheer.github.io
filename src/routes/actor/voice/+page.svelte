@@ -14,7 +14,7 @@
     });
 
   const audioModules = import.meta.glob(
-  '/src/routes/actor/audio/files/*.{mp3,wav,ogg,m4a}',
+  '/src/routes/actor/voice/files/*.{mp3,wav,ogg,m4a}',
   {
     eager: true,
     query: {
