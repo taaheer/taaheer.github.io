@@ -14,7 +14,7 @@
     });
 
   const audioModules = import.meta.glob(
-  '/src/routes/actor/audio/files/*.{mp3,wav,ogg}',
+  '/src/routes/actor/audio/files/*.{mp3,wav,ogg,m4a}',
   {
     eager: true,
     query: {
@@ -99,7 +99,7 @@
     .audio-box {
       border: 2px solid #ccc;
       border-radius: 10px;
-      padding: 15px;
+      padding: 16px;
       max-width: 300px;
       background-color: #f9f9f9;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -107,7 +107,7 @@
   
     .audio-box h2 {
       font-size: 18px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
   
     /* Audio element styling */
