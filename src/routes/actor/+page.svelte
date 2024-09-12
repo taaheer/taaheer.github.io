@@ -304,20 +304,6 @@
   .close:hover {
     background-color: var(--color-tertiary);
   }
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
-    gap: 10px;
-    place-items: center;
-  }
-
-  .gallery-item {
-    overflow: hidden;
-    position: relative;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
 
   .close-btn-div{
     display: grid;
@@ -354,9 +340,6 @@
   }
 
   @media (max-width: 849px) {
-    .gallery {
-      grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-    }
 
     img{
       border-radius: 0.5em 0.5em 0 0;
