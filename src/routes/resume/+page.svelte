@@ -37,6 +37,18 @@
 
 <Header />
 <div class="wrapper">
+
+<section>
+    <div class="head-text">
+        <h2>About</h2>
+    </div>
+    <div class="content">
+        {#each techAbout as about}
+            <p>{about}</p>
+        {/each}
+    </div>
+</section>
+
 <section>
     <div class="head-text">
         <h2>Contact</h2>
@@ -49,6 +61,8 @@
             <strong>{type}</strong>: {value}
             {:else if type === "Email"}
             <strong>{type}</strong>: <a href="mailto:{value}">{value}</a>
+            {:else if type === "Contact Number"}
+            <strong>{type}</strong>: <a href="tel:{value}">{value}</a>
             {:else}
             <strong>{type}</strong>: <a href={value}>{value}</a>
             {/if}
@@ -58,16 +72,6 @@
     </div>
 </section>
 
-<section>
-    <div class="head-text">
-        <h2>About</h2>
-    </div>
-    <div class="content">
-        {#each techAbout as about}
-            <p>{about}</p>
-        {/each}
-    </div>
-</section>
 
 <section>
     <div class="head-text">

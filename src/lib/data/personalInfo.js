@@ -22,7 +22,8 @@ export const contact = [
     {type: "Email", value: firstName + lastName + "@gmail.com"},
     {type: "GitHub", value: "https://github.com/" + firstName},
     {type: "LinkedIn", value: "https://linkedin.com/in/" + firstName + '-' + lastName},
-    {type: "Website", value: "https://" + firstName + ".github.io"}
+    {type: "Website", value: "https://" + firstName + ".github.io"},
+    {type: "Contact Number", value: "+919987794854"}
     ];
 
     function cmToFeetInches(cm) {
