@@ -18,7 +18,6 @@ export const ternaryCareer = "Voice Actor"
 export const previewImage = "https://taaheer.github.io/og-image.png"
 
 export const contact = [
-    {type: "Location", value: address},
     {type: "Email", value: firstName + lastName + "@gmail.com"},
     {type: "GitHub", value: "https://github.com/" + firstName},
     {type: "LinkedIn", value: "https://linkedin.com/in/" + firstName + '-' + lastName},
