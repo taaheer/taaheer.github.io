@@ -22,6 +22,7 @@ export const contact = [
     {type: "GitHub", value: "https://github.com/" + firstName},
     {type: "LinkedIn", value: "https://linkedin.com/in/" + firstName + '-' + lastName},
     {type: "Website", value: "https://" + firstName + ".github.io"},
+    {type: "Actor portfolio", value: "https://" + firstName + ".github.io/actor"},
     {type: "Contact Number", value: "+919987794854"}
     ];
 

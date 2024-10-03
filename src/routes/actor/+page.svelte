@@ -92,6 +92,7 @@
   }
   address{
     font-size: 1.3em;
+    margin-top: 1em
   }
 
   .contact > *{
@@ -180,11 +181,6 @@
     img{
       border-radius: 0.5em 0.5em 0 0;
     }
-
-    h2{
-    font-weight: 300;
-    letter-spacing: 0.1rem;
-   }
   }
   @media (max-width: 600px) {
     section{
