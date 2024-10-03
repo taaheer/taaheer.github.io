@@ -1,5 +1,5 @@
 <script>
-  import { fullname, primaryCareer, secondaryCareer, ternaryCareer, address, contact, gender, birthDate, age, heightinCm, heightinFeetInches } from "../../lib/data/personalInfo";
+  import { fullname, primaryCareer, secondaryCareer, ternaryCareer, address, contact, gender, birthDate, age, heightinCm, heightinFeetInches, languages } from "../../lib/data/personalInfo";
   import { pages } from "./data.js";
   import { onMount } from 'svelte';
   import {title, meta, og, twitter, type} from "./heads.js";
@@ -57,6 +57,7 @@
     <h2>Age: {age}</h2>
     <h2>Born: {birthDate}</h2>
     <h2>Height: {heightinCm} cm / {heightinFeetInches.feet} Feet {heightinFeetInches.inches} Inches</h2>
+    <h2>Languages: {languages}</h2>
     <address>Address: {address}</address>
     <div class="contact">
       {#each contact as contact}

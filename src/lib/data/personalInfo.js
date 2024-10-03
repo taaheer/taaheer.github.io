@@ -16,6 +16,9 @@ export const primaryCareer = "Software Engineer";
 export const secondaryCareer = "Actor"
 export const ternaryCareer = "Voice Actor"
 export const previewImage = "https://taaheer.github.io/og-image.png"
+export const languages = [
+    "English", " Hindi"
+]
 
 export const contact = [
     {type: "Email", value: firstName + lastName + "@gmail.com"},
