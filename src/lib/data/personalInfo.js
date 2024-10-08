@@ -8,13 +8,13 @@ export const heightinFeetInches = cmToFeetInches(heightinCm);
 export const gender = "Male";
 const currentYear = new Date().getFullYear();
 export const age = currentYear - birthYear;
-export const city = "Navi Mumbai";
+export const city = "Mumbai";
 export const state = "Maharashtra";
 export const country = "India";
 export const address = city + ", " + state + ", " + country;
 export const primaryCareer = "Software Engineer";
 export const secondaryCareer = "Actor"
-export const ternaryCareer = "Voice Actor"
+export const ternaryCareer = "writer"
 export const previewImage = "https://taaheer.github.io/og-image.png"
 export const languages = [
     "English", " Hindi"
