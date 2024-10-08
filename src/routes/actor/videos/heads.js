@@ -1,4 +1,4 @@
-import { fullname, primaryCareer, secondaryCareer } from "../../../lib/data/personalInfo"
+import { fullname } from "../../../lib/data/personalInfo"
 
 export const title = "Actor / Video- " + fullname
 const description = "A page featuring video content of actor " + fullname + " including clips and showreels."
