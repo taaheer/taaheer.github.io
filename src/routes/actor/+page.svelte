@@ -77,7 +77,7 @@
     </div>
   </div>
   <div class="headshot">
-    <enhanced:img src="./headshot/Taaheer-headshot-new.avif" alt="An alt text" class="headshot-image"/>  
+    <enhanced:img src="./headshot/Taaheer-headshot.avif" alt="An alt text" class="headshot-image"/>  
   </div>
 
 </section>
