@@ -206,6 +206,7 @@ const videogames = import.meta.glob(
         {#if modal.title == "Video Games / Interactive"}
           <AudioContainer audioModules={videogames}/>
         {/if}
+    </div>
     <div class="close-btn-div">
       <button class="close">Close</button>
     </div>

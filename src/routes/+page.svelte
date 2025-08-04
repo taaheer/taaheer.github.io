@@ -55,23 +55,80 @@
 
 <Header />
 <section>
-    <p>Looking for?</p>
-    {#each internalLink as { name, url }}
-    <a href={url}>{name}</a>
-    {/each}
+    <h2>Main Menu</h2>
+
+    <div class="multi-button">
+        {#each internalLink as { name, url }}
+            <button on:click={() => window.open(url, "_blank")}>{name}</button>
+        {/each}
+    </div>
+
 </section>
 
 <style>
     * {
         text-align: center;
-        padding: 1em;
+        font-family: "Orbitron";
     }
 
-    a {
-        display: block;
-        margin: 0.4em 0;
-        font-size: 1em;
+    h2{
+        font-size: 2em;
+        font-weight: 300;
+        color: gold;
     }
+
+  button{
+    display: block;
+    width: 100%;
+  }
+
+  .multi-button button{
+    margin-bottom: 1em;
+  }
+
+
+    button {
+  --border: 5px;    /* the border width */
+  --slant: 0.7em;   /* control the slanted corners */
+  --color: gold; /* the color */
+  
+  font-size: 35px;
+  padding: 0.4em 1.2em;
+  border: none;
+  cursor: pointer;
+  font-weight: normal;
+  color: white;
+  background: 
+     linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+     linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+  clip-path: 
+      polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+              100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+             );
+  transition: color var(--t,0.3s), background-size 0.3s;
+}
+button:focus-visible {
+  outline-offset: calc(-1*var(--border));
+  outline: var(--border) solid #000c;
+  clip-path: none;
+  background-size: 0 0;
+}
+button:hover,
+button:active{
+  background-size: 100% 100%;
+  color: black;
+  --t: 0.2s 0.1s;
+}
+
+button:active {
+  --s: #0005;
+  transition: none;
+}
 
     @media (max-width: 768px) {
         *{
@@ -79,4 +136,8 @@
         }
     }
     
+    button{
+            background-color: rgba(0, 0, 0, 0.7);
+
+    }
 </style>
