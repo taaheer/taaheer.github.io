@@ -1,20 +1,12 @@
 <script>
-    import {fullname, primaryCareer, secondaryCareer, ternaryCareer} from "../data/personalInfo";
+    import {fullname} from "../data/personalInfo";
     import { onMount } from "svelte";
     import { blur } from "svelte/transition";
-
-    let startAnimation = false;
-
-    onMount(() => {
-        startAnimation = true
-    })
 </script>
 
 
 <h1>{fullname}</h1>
-{#if startAnimation}
-<h2 transition:blur>{primaryCareer} - {secondaryCareer} - {ternaryCareer}</h2>
-{/if}
+<h2 transition:blur>Are you still human at the core?</h2>
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');

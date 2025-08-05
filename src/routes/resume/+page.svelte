@@ -119,6 +119,10 @@
   
 
 <style>
+    *{
+        font-family: 'Orbitron', sans-serif;
+        font-weight: normal;
+    }
     .wrapper{
         display: grid;
         grid-template-columns: auto auto;
