@@ -1,5 +1,5 @@
 <script>
-  import { fullname, primaryCareer, secondaryCareer, ternaryCareer, address, contact, gender, birthDate, age, heightinCm, heightinFeetInches, languages } from "../../lib/data/personalInfo";
+  import { fullname, primaryCareer, secondaryCareer, address, contact, gender, birthDate, age, heightinCm, heightinFeetInches, languages } from "../../lib/data/personalInfo";
   import { pages } from "./data.js";
   import { onMount } from 'svelte';
   import {title, meta, og, twitter, type} from "./heads.js";
