@@ -2,7 +2,7 @@
   import { fullname, primaryCareer, secondaryCareer, ternaryCareer, address, contact, gender, birthDate, age, heightinCm, heightinFeetInches } from "../../../lib/data/personalInfo";
   import { modals } from "./data.js";
   import { onMount } from 'svelte';
-  import {title, meta, og, twitter, type} from "../heads.js";
+  import {title, meta, og, twitter, type} from "./heads.js";
   import Seo from "../../../lib/components/+Seo.svelte";
   import AudioContainer from "../../../lib/components/+AudioContainer.svelte";
 
@@ -187,7 +187,7 @@ const videogames = import.meta.glob(
 
 
 {#each modals as modal}
-<dialog id="{modal.title}">
+<dialog id={modal.title}>
 <section>
     <div class="modal-title">
       <h2>{modal.title}</h2>
@@ -206,6 +206,7 @@ const videogames = import.meta.glob(
         {#if modal.title == "Video Games / Interactive"}
           <AudioContainer audioModules={videogames}/>
         {/if}
+    </div>
     <div class="close-btn-div">
       <button class="close">Close</button>
     </div>

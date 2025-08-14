@@ -152,11 +152,15 @@
       .video-container {
         flex-direction: column;
         align-items: center;
+        padding: 0;
+
       }
   
       .video-box {
         width: 90%;
         max-width: none;
+        min-width: 15em;
+
       }
     }
   
