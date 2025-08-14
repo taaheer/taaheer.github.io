@@ -3,7 +3,7 @@
 </script>
 
 <slot></slot>
-<footer>© 2024 {fullname}. All rights reserved.</footer>
+<footer>© 2025 {fullname}. All rights reserved.</footer>
 
 <style>
     :global(a){
