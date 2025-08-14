@@ -139,7 +139,5 @@ button:active {
     button{
         background-color: rgba(0, 0, 0, 0.7);
         font-size: 1.5em;
-
-
     }
 </style>
