@@ -12,7 +12,7 @@
         { name: primaryCareer +" Resume", url: "/resume", },
         { name: secondaryCareer + " Portfolio", url: "/actor" },
         { name: "Projects", url: "/projects" },
-        { name: 'My writings', url: 'https://taaheer.github.io/my-works/'}
+        { name: 'My writings', url: 'https://taaheer.github.io/works/'}
     ];    
 </script>
 
@@ -88,7 +88,7 @@
 
 
     button {
-  --border: 5px;    /* the border width */
+  --border: 0.2em;    /* the border width */
   --slant: 0.7em;   /* control the slanted corners */
   --color: gold; /* the color */
   
@@ -97,19 +97,20 @@
   border: none;
   cursor: pointer;
   font-weight: normal;
-  color: white;
+  color: white;        
   background: 
-     linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
-     linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+  linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  background-color: rgba(0, 0, 0, 0.7);
   background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
   background-repeat: no-repeat;
   box-shadow:
-    0 0 0 200px inset var(--s,#0000),
-    0 0 0 var(--border) inset var(--color);
+  0 0 0 200px inset var(--s,#0000),
+  0 0 0 var(--border) inset var(--color);
   clip-path: 
-      polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
-              100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
-             );
+  polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+  100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+  );
   transition: color var(--t,0.3s), background-size 0.3s;
 }
 button:focus-visible {
@@ -132,14 +133,7 @@ button:active {
 
     @media (max-width: 768px) {
         *{
-            font-size: 1rem;
+            font-size: 0.9em;
         }
-    }
-    
-    button{
-        background-color: rgba(0, 0, 0, 0.7);
-        font-size: 1.5em;
-
-
     }
 </style>

@@ -133,7 +133,7 @@
     border: var(--border-size) solid black;
     color: var(--color-secondary);
     background-color: var(--color-primary);
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-family: var(--font-family);
     text-shadow: var(--shadow) 2px 2px;
     transition: flex-grow var(--duration) var(--ease);

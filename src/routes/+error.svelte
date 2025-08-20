@@ -21,6 +21,9 @@
 
 
 <style>
+    *{
+        font-family: "Orbitron";
+    }
     .error-container {
         display: flex;
         flex-direction: column;
@@ -32,6 +35,8 @@
     h1 {
         font-size: 2.5rem;
         margin-bottom: 1rem;
+        font-weight: 300;
+        color: gold;    
     }
     p {
         font-size: 1.2rem;
