@@ -113,7 +113,7 @@
     --border-size: 0.125rem;
     --duration: 250ms;
     --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
-    --font-family: monospace;
+    --font-family: ;
     --color-primary: white;
     --color-secondary: black;
     --color-tertiary: dodgerblue;
@@ -187,7 +187,11 @@
     section{
       display: flex;
       flex-direction: column-reverse;
-        }
+    }
+    .text {
+    margin-top: 0em;
+    text-align: center;
+  }
   }
   
 </style>

@@ -11,7 +11,6 @@
     const internalLink = [
         { name: primaryCareer +" Resume", url: "/resume", },
         { name: secondaryCareer + " Portfolio", url: "/actor" },
-        { name: "Projects", url: "/projects" },
         { name: 'My writings', url: 'https://taaheer.github.io/works/'}
     ];    
 </script>
