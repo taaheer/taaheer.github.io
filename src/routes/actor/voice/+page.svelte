@@ -1,5 +1,5 @@
 <script>
-  import { fullname, primaryCareer, secondaryCareer, ternaryCareer, address, contact, gender, birthDate, age, heightinCm, heightinFeetInches } from "../../../lib/data/personalInfo";
+  import { fullname, primaryCareer, gender, birthDate } from "../../../lib/data/personalInfo";
   import { onMount } from 'svelte';
   import {title, meta, og, twitter, type} from "./heads.js";
   import Seo from "../../../lib/components/+Seo.svelte";
@@ -85,7 +85,7 @@
   });
 
   const audioFiles = import.meta.glob(
-  '/src/routes/actor/voice/files/**/*.{mp3,wav,ogg}',
+  '/src/routes/actor/voice/files/**/*.{mp3,wav,ogg,m4a,flac}',
   {
     eager: true,
     query: { enhanced: true }
