@@ -1,6 +1,5 @@
 <script>
   import { fullname, primaryCareer, secondaryCareer, ternaryCareer, address, contact, gender, birthDate, age, heightinCm, heightinFeetInches } from "../../../lib/data/personalInfo";
-  import { modals } from "./data.js";
   import { onMount } from 'svelte';
   import {title, meta, og, twitter, type} from "./heads.js";
   import Seo from "../../../lib/components/+Seo.svelte";
@@ -85,53 +84,36 @@
     };
   });
 
-  const animation = import.meta.glob(
-  '/src/routes/actor/voice/files/animation/*.{mp3,wav,ogg}',
+  const audioFiles = import.meta.glob(
+  '/src/routes/actor/voice/files/**/*.{mp3,wav,ogg}',
   {
     eager: true,
-    query: {
-      enhanced: true
-    }
-  }
-);
-const audiobooks = import.meta.glob(
-  '/src/routes/actor/voice/files/audiobooks/*.{mp3,wav,ogg}',
-  {
-    eager: true,
-    query: {
-      enhanced: true
-    }
-  }
-);
-const commercial = import.meta.glob(
-  '/src/routes/actor/voice/files/commercial/*.{mp3,wav,ogg}',
-  {
-    eager: true,
-    query: {
-      enhanced: true
-    }
-  }
-);
-const narration = import.meta.glob(
-  '/src/routes/actor/voice/files/narration/*.{mp3,wav,ogg}',
-  {
-    eager: true,
-    query: {
-      enhanced: true
-    }
-  }
-);
-const videogames = import.meta.glob(
-  '/src/routes/actor/voice/files/videogames/*.{mp3,wav,ogg}',
-  {
-    eager: true,
-    query: {
-      enhanced: true
-    }
+    query: { enhanced: true }
   }
 );
 
-  const audioModules = [animation, audiobooks, commercial, narration, videogames]
+const groupedAudio = {};
+
+for (const path in audioFiles) {
+  const match = path.match(/files\/([^/]+)\//);
+  if (match) {
+    const category = match[1];
+    if (!groupedAudio[category]) {
+      groupedAudio[category] = [];
+    }
+    groupedAudio[category].push({
+      path,
+      module: audioFiles[path]
+    });
+  }
+}
+
+const modals = Object.keys(groupedAudio).map((category) => ({
+  title: category,
+  files: groupedAudio[category]
+}));
+
+
 
   import { page } from "$app/stores"
   const url = $page.url.href
@@ -188,24 +170,10 @@ const videogames = import.meta.glob(
 
 {#each modals as modal}
 <dialog id={modal.title}>
-<section>
+  <section>
     <div class="modal-title">
       <h2>{modal.title}</h2>
-        {#if modal.title == "Animation"}
-          <AudioContainer audioModules={animation}/>
-        {/if}
-        {#if modal.title == "Audio Books"}
-          <AudioContainer audioModules={audiobooks}/>
-        {/if}
-        {#if modal.title == "Commercial"}
-          <AudioContainer audioModules={commercial}/>
-        {/if}
-        {#if modal.title == "Narration"}
-          <AudioContainer audioModules={narration}/>
-        {/if}
-        {#if modal.title == "Video Games / Interactive"}
-          <AudioContainer audioModules={videogames}/>
-        {/if}
+      <AudioContainer audioModules={modal.files}/>
     </div>
     <div class="close-btn-div">
       <button class="close">Close</button>
@@ -213,7 +181,6 @@ const videogames = import.meta.glob(
   </section>
 </dialog>
 {/each}
-
 
 
   <style>

@@ -2,19 +2,18 @@
     export let audioModules;
 </script>
 
-      <div class="audio-container">
-      
-        {#each Object.entries(audioModules) as [_path, module]}
-    
-        <section class="audio-box">
-          <h2>{_path.split('/').pop().replace(/\.[^/.]+$/, "")}</h2>
-          <audio controls>
-            <source src={module.default} type="audio/mp3">
-            Your browser does not support the audio element.
-          </audio>
-        </section>
-        {/each}
-      </div>
+<div class="audio-container">
+  {#each audioModules as file}
+    <section class="audio-box">
+      <h2>{file.path.split('/').pop().replace(/\.[^/.]+$/, "")}</h2>
+      <audio controls>
+        <source src={file.module.default} type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+  {/each}
+</div>
+
 
 
 
