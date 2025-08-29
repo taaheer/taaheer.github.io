@@ -57,6 +57,14 @@
       if (modal) {
         // Save scroll position
         setModalScrollPosition(modal.id, modal.scrollTop);
+
+        // Stop all audio inside this modal
+        const audios = modal.querySelectorAll("audio");
+        audios.forEach(audio => {
+          audio.pause();
+          audio.currentTime = 0; // Reset to start
+        });
+
         modal.close();
         setModalState(modal.id, false);
       }
