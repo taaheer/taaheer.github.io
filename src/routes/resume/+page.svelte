@@ -17,7 +17,8 @@
         "@context": "http://schema.org",
         "@type": "${type}",
         "name": "${fullname}",
-        "url": "${url}",
+        "url": "https://taaheer.github.io/resume",
+        "@id": "https://kg.google.com/g/11l2j8lsj8",
         "jobTitle": "${primaryCareer}, ${secondaryCareer}",
         "birthDate": "${birthDate}",
         "gender": "${gender}",
@@ -26,7 +27,9 @@
         "knowsLanguage": "English, Hindi",
         "sameAs": [
             "https://github.com/Taaheer",
-            "https://linkedin.com/in/Taaheer-Labbe"
+            "https://linkedin.com/in/Taaheer-Labbe",
+            "https://www.youtube.com/@taaheerlabbe",
+            "https://www.wikidata.org/wiki/Q136734120"
         ]
     }
     </script>`}

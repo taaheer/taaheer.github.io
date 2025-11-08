@@ -23,7 +23,7 @@
         "@context": "http://schema.org",
         "@type": "${type}",
         "name": "${title}",
-        "url": "${url}",
+        "url": "https://taaheer.github.io",
         "mainEntity": {
             "@type": "ItemList",
             "itemListElement": [
@@ -41,10 +41,11 @@
                     "@type": "WebPage",
                     "name": "Project List",
                     "url": "https://taaheer.github.io/projects"
-                }                {
+                },                
+                {
                     "@type": "WebPage",
                     "name": "My Writes",
-                    "url": "https://taaheer.github.io/my-works"
+                    "url": "https://taaheer.github.io/works"
                 }
                 ]
         }

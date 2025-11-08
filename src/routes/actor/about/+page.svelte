@@ -29,19 +29,23 @@
       "@context": "https://schema.org",
       "@type": "${type}",
       "name": "${title}",
-      "url": "${url}",
+      "url": "https://taaheer.github.io/actor/about",
       "creator": {
         "@type": "Person",
+        "@id": "https://kg.google.com/g/11l2j8lsj8",
         "name": "${fullname}",
-        "jobTitle": "${secondaryCareer}, ${primaryCareer}",
+        "jobTitle": "Actor, Writer, Software Eningeer",
         "birthDate": "${birthDate}",
         "gender": "${gender}",
-        "knowsAbout": "Acting",
+        "knowsAbout": ["Acting"],
         "nationality": "India",
-        "knowsLanguage": "English, Hindi",
+        "knowsLanguage": ["English, Hindi"],
+        "image": "https://taaheer.github.io/Taaheer-headshot.avif",
         "sameAs": [
             "https://github.com/Taaheer",
-            "https://linkedin.com/in/Taaheer-Labbe"
+            "https://linkedin.com/in/Taaheer-Labbe",
+            "https://www.youtube.com/@taaheerlabbe",
+            "https://www.wikidata.org/wiki/Q136734120"
         ]
       },
       "genre": "Acting",
