@@ -53,11 +53,12 @@
 
 <section class="main">
   <div class="text">
-    <h1>Name: <strong>{fullname}</strong></h1>
+    <h1>Name: {fullname}</h1>
     <h2>Age: {age}</h2>
-    <h2>Born: {birthDate}</h2>
     <h2>Height: {heightinCm} cm / {heightinFeetInches.feet} Feet {heightinFeetInches.inches} Inches</h2>
     <h2>Languages: {languages}</h2>
+    <h2>Skills: Bike riding</h2>
+    <h2>Experience: Theatre</h2>
     <address>Address: {address}</address>
     <div class="contact">
       {#each contact as contact}
@@ -65,8 +66,6 @@
       <h3>{contact.type}: <a href={`mailto:${contact.value}`}>{contact.value}</a></h3>
       {:else if contact.type == "Contact Number"}
       <h3>{contact.type}: <a href={`tel:${contact.value}`}>{contact.value}</a></h3>
-      {:else if contact.type != "Location"}
-      <h3>{contact.type}: <a href={contact.value}>{contact.value}</a></h3>
       {/if}
       {/each}
     </div>
@@ -77,7 +76,7 @@
     </div>
   </div>
   <div class="headshot">
-    <enhanced:img src="./headshot/Taaheer-headshot.avif" alt="An alt text" class="headshot-image"/>  
+    <enhanced:img src="./headshot/Taaheer-headshot.avif" alt="Taaheer Labbe Headshot" class="headshot-image"/>  
   </div>
 
 </section>
@@ -118,7 +117,7 @@
     --color-secondary: black;
     --color-tertiary: dodgerblue;
     --shadow: rgba(0, 0, 0, 0.1);
-    --space: 0.5rem;
+    --space: 0rem;
   }
   .multi-button {
     display: flex;
@@ -178,6 +177,9 @@
   }
 
   @media (max-width: 849px) {
+  :root {
+    --space: 0.5rem;
+  }
 
     img{
       border-radius: 0.5em 0.5em 0 0;

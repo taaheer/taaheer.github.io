@@ -13,7 +13,7 @@ export const meta = [
 export const og = [
     {property: 'og:title', content: title},
     {property: 'og:type', content: 'website'},
-    {property: 'og:image', content: 'https://taaheer.github.io/_app/immutable/assets/Taaheer-headshot.XI_jQFJd.png'},
+    {property: 'og:image', content: '../Taaheer-headshot.avif'},
     {property: 'og:description', content: description}
 ]
 
