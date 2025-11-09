@@ -51,24 +51,15 @@
       "name": "${title}",
       "url": "${url}",
       "description": "A page featuring video content of actor ${fullname}, including clips and showreels.",
-      "mainEntity": {
+      "creator": {
         "@type": "Person",
-        "name": "${fullname}",
-        "jobTitle": "${primaryCareer}",
-        "birthDate": "${birthDate}",
-        "gender": "${gender}",
-        "nationality": "Indian",
-        "knowsLanguage": ["English", "Hindi"],
-        "sameAs": [
-          "https://github.com/taaheer",
-          "https://linkedin.com/in/taaheer-Labbe"
-        ]
+        "@id": "https://kg.google.com/g/11l2j8lsj8",
+        "name": "Taaheer Labbe"
       },
-      "mainEntityOfPage": {
+      "about": {
         "@type": "Person",
-        "name": "${fullname}",
-        "url": "${url}"
-      },
+        "@id": "https://kg.google.com/g/11l2j8lsj8"
+      }
 
     }
     </script>`}

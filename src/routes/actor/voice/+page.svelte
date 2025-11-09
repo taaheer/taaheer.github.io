@@ -137,24 +137,14 @@ const modals = Object.keys(groupedAudio).map((category) => ({
       "name": "${title}",
       "url": "${url}",
       "description": "A portfolio showcasing voice acting samples and roles.",
-      "mainEntity": {
+      "creator": {
         "@type": "Person",
-        "name": "${fullname}",
-        "jobTitle": "${primaryCareer}",
-        "birthDate": "${birthDate}",
-        "gender": "${gender}",
-        "nationality": "Indian",
-        "knowsLanguage": ["English", "Hindi"],
-        "sameAs": [
-          "https://github.com/taaheer",
-          "https://linkedin.com/in/taaheer-Labbe"
-        ],
-        "additionalType": "https://schema.org/Person"
+        "@id": "https://kg.google.com/g/11l2j8lsj8",
+        "name": "Taaheer Labbe"
       },
-      "mainEntityOfPage": {
+      "about": {
         "@type": "Person",
-        "name": "${fullname}",
-        "url": "${url}"
+        "@id": "https://kg.google.com/g/11l2j8lsj8"
       },
       "about": "Portfolio showcasing voice samples.",
       "genre": "Voice Acting",

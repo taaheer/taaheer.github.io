@@ -28,29 +28,22 @@
     {@html `<script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "${type}",
-      "name": "${title}",
+      "@type": "CreativeWork",
+      "name": "Actor Portfolio - Taaheer Labbe",
       "url": "https://taaheer.github.io/actor",
       "creator": {
         "@type": "Person",
         "@id": "https://kg.google.com/g/11l2j8lsj8",
-        "name": "${fullname}",
-        "jobTitle": "Actor, Writer, Software Eningeer",
-        "birthDate": "${birthDate}",
-        "gender": "${gender}",
-        "knowsAbout": ["Acting"],
-        "nationality": "India",
-        "knowsLanguage": ["English, Hindi"],
-        "image": "https://taaheer.github.io/Taaheer-headshot.avif",
-        "sameAs": [
-            "https://github.com/Taaheer",
-            "https://linkedin.com/in/Taaheer-Labbe",
-            "https://www.youtube.com/@taaheerlabbe",
-            "https://www.wikidata.org/wiki/Q136734120"
-        ]
+        "name": "Taaheer Labbe"
       },
       "genre": "Acting",
-      "about": "Portfolio showcasing acting roles, headshots."
+      "about": {
+        "@type": "Person",
+        "@id": "https://kg.google.com/g/11l2j8lsj8"
+      },
+      "description": "Acting portfolio showcasing Taaheer Labbe's roles, performances, and headshots.",
+      "image": "https://taaheer.github.io/Taaheer-headshot.avif"
+
     }
     </script>`}
 </svelte:head>

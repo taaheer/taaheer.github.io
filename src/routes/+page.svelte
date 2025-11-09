@@ -9,7 +9,6 @@
     
 
     const internalLink = [
-        { name: primaryCareer +" Resume", url: "/resume", },
         { name: secondaryCareer + " Portfolio", url: "/actor" },
         { name: 'My writings', url: 'https://taaheer.github.io/works/'}
     ];    
@@ -17,38 +16,59 @@
 
 <Seo title={title} meta={meta} og={og} twitter={twitter} url={url}/>
 
-<svelte:head>       
-    {@html `<script type="application/ld+json">
+<svelte:head>
+  {@html `<script type="application/ld+json">
     {
-        "@context": "http://schema.org",
-        "@type": "${type}",
-        "name": "${title}",
-        "url": "https://taaheer.github.io",
-        "mainEntity": {
-            "@type": "ItemList",
-            "itemListElement": [
-                {
-                    "@type": "WebPage",
-                    "name": "Resume",
-                    "url": "https://taaheer.github.io/resume"
-                },
-                {
-                    "@type": "WebPage",
-                    "name": "Actor Portfolio",
-                    "url": "https://taaheer.github.io/actor"
-                },
-                {
-                    "@type": "WebPage",
-                    "name": "Project List",
-                    "url": "https://taaheer.github.io/projects"
-                },                
-                {
-                    "@type": "WebPage",
-                    "name": "My Writes",
-                    "url": "https://taaheer.github.io/works"
-                }
-                ]
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Homepage - Taaheer Labbe",
+      "url": "https://taaheer.github.io/",
+      "description": "Official website of Taaheer Labbe - actor, writer, and former software engineer.",
+      "mainEntity": {
+        "@type": "Person",
+        "@id": "https://kg.google.com/g/11l2j8lsj8",
+        "name": "Taaheer Labbe",
+        "jobTitle": ["Actor", "Writer", "Software Engineer"],
+        "birthDate": "2004-09-17",
+        "gender": "Male",
+        "nationality": {
+          "@type": "Country",
+          "name": "India"
+        },
+        "knowsAbout": ["Acting", "Screenwriting", "Software Development"],
+        "knowsLanguage": ["English", "Hindi"],
+        "image": "https://taaheer.github.io/Taaheer-headshot.avif",
+        "url": "https://taaheer.github.io/",
+        "sameAs": [
+          "https://github.com/Taaheer",
+          "https://linkedin.com/in/Taaheer-Labbe",
+          "https://www.youtube.com/@taaheerlabbe",
+          "https://www.wikidata.org/wiki/Q136734120"
+        ],
+        "description": "Taaheer Labbe is an Indian actor and writer with a background in software engineering."
+      },
+      "hasPart": [
+        {
+          "@type": "WebPage",
+          "name": "Resume",
+          "url": "https://taaheer.github.io/resume"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Actor Portfolio",
+          "url": "https://taaheer.github.io/actor"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Project List",
+          "url": "https://taaheer.github.io/projects"
+        },
+        {
+          "@type": "WebPage",
+          "name": "My Writes",
+          "url": "https://taaheer.github.io/works"
         }
+      ]
     }
     </script>`}
 </svelte:head>
