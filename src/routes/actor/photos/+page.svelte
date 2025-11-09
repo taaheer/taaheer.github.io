@@ -99,82 +99,114 @@
     }
     </script>`}
   </svelte:head>
-    
-  
-  <section>
-    <div class="page-title">
-      <h1>Photos</h1>
-    </div>
-    <div class="gallery" id="images">
-      {#each Object.entries(imageModules) as [_path, module]}
+    <section>
+  <div class="page-title">
+    <h1>Photos</h1>
+  </div>
+
+  <div class="gallery" id="images">
+    {#each Object.entries(imageModules) as [_path, module]}
       <div class="gallery-item">
-      <a
-      href={imageMap[_path.split('/').pop().replace(/\.[^/.]+$/, "")]}
-      data-img={imageMap[_path.split('/').pop().replace(/\.[^/.]+$/, "")]}
-      data-height="2560"
-      data-width="1920"
-      data-alt={_path.split('/').pop().replace(/\.[^/.]+$/, "")}      
-      >
-      <enhanced:img class="photos" src={module.default} alt="{_path.split('/').pop().replace(/\.[^/.]+$/, "")}" loading="lazy" />
-      </a>
+        <a
+          href={imageMap[_path.split('/').pop().replace(/\.[^/.]+$/, "")]}
+          data-img={imageMap[_path.split('/').pop().replace(/\.[^/.]+$/, "")]}
+          data-height="2560"
+          data-width="1920"
+          data-alt={_path.split('/').pop().replace(/\.[^/.]+$/, "")}
+        >
+          <enhanced:img
+            class="photo"
+            src={module.default}
+            alt="{_path.split('/').pop().replace(/\.[^/.]+$/, "")}"
+            loading="lazy"
+          />
+        </a>
       </div>
-      {/each}
-    </div>
+    {/each}
+  </div>
+</section>
 
-  </section>
-  
-
-  
-  <style>
-    .page-title{
-      display: flex;
-    justify-content: center;
-    border-bottom: 0.16rem solid black;
-    margin-bottom: 1.8em;
-    }
-    h1{
-    text-transform: uppercase;
-  }
-  h1{
-    letter-spacing: 0.4rem;
-    font-weight: 300;
-
+<style>
+  :root {
+    --accent-color: #0078ff;
+    --text-dark: #222;
+    --border-radius: 12px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --hover-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    --gallery-bg: #f9f9f9;
   }
 
-  section{
-    padding: 1em
+  section {
+    padding: 2em 1.5em;
   }
 
-  img {
-    border-radius: 0 0.4em 0.4em 0;
+  .page-title {
     display: flex;
-    width: 100%;
-    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid var(--accent-color);
+    margin-bottom: 2em;
+    padding-bottom: 0.5em;
   }
 
+  h1 {
+    letter-spacing: 0.3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--text-dark);
+  }
+
+  /* GALLERY GRID */
   .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
-    gap: 10px;
-    place-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.2em;
+    justify-items: center;
   }
 
   .gallery-item {
-    overflow: hidden;
     position: relative;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    background-color: var(--gallery-bg);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
   }
 
-  @media (max-width: 849px) {
+  .gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+  }
+
+  .photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: block;
+  }
+
+  .gallery-item:hover .photo {
+    transform: scale(1.05);
+    opacity: 0.95;
+  }
+
+  /* MOBILE OPTIMIZATION */
+  @media (max-width: 768px) {
+    section {
+      padding: 1.2em;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+    }
+
     .gallery {
-      grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-    }
-
-    img{
-      border-radius: 0.5em 0.5em 0 0;
+      gap: 0.8em;
     }
   }
-  </style>
+
   
+</style>

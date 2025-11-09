@@ -152,107 +152,160 @@ const modals = Object.keys(groupedAudio).map((category) => ({
     </script>`}
   </svelte:head>
   
-  
-<section>
-    <div class="page-title">
-      <h1>Audio</h1>
-    </div>
-    <div class="multi-button">
-      {#each modals as modal}
-        <button data-modal="{modal.title}">{modal.title}</button>
-      {/each}
+<section class="card">
+  <div class="page-title">
+    <h1>Audio</h1>
   </div>
-  </section>
 
-
+  <div class="multi-button">
+    {#each modals as modal}
+      <button class="modern-btn" data-modal="{modal.title}">{modal.title}</button>
+    {/each}
+  </div>
+</section>
 
 {#each modals as modal}
-<dialog id={modal.title}>
+<dialog id={modal.title} class="modern-dialog">
   <section>
-    <div class="modal-title">
+    <div class="modal-header">
       <h2>{modal.title}</h2>
-      <AudioContainer audioModules={modal.files}/>
+      <button class="close">&times;</button>
     </div>
-    <div class="close-btn-div">
-      <button class="close">Close</button>
+    <div class="modal-body">
+      <AudioContainer audioModules={modal.files}/>
     </div>
   </section>
 </dialog>
 {/each}
 
+<style>
+  /* ============ General Layout ============ */
+  :root {
+    --primary-color: #111;
+    --accent-color: #0078ff;
+    --bg-color: #f8f9fa;
+    --card-bg: #fff;
+    --radius: 10px;
+  }
 
-  <style>
+  .card {
+    background: var(--card-bg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: var(--radius);
+    max-width: 700px;
+    padding: 2em 2.5em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  }
 
-    .page-title{
-      display: flex;
-      justify-content: center;
-      border-bottom: 0.16rem solid black;
-      margin-bottom: 1.8em;
-    }
-    h1, h2{
+  section {
+    padding: 2em;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .page-title {
+    text-align: center;
+    margin-bottom: 2em;
+    border-bottom: 2px solid #000;
+  }
+
+  h1, h2 {
     text-transform: uppercase;
-  }
-  button{
-    display: block;
-    width: 100%;
-  }
-  .multi-button button{
-    margin-bottom: 1em;
-  }
-  h1{
-    letter-spacing: 0.4rem;
-    font-weight: 300;
-
+    letter-spacing: 0.2em;
+    font-weight: 400;
   }
 
-  h2{
-    letter-spacing: 0.4rem;
+  h1 {
+    font-size: 2.4em;
   }
 
-  section{
-    padding: 1em
+  h2 {
+    font-size: 1.5em;
+    margin: 0;
   }
-  button {
-  --border: 5px;    /* the border width */
-  --slant: 0.7em;   /* control the slanted corners */
-  --color: #000000; /* the color */
-  
-  font-size: 35px;
-  padding: 0.4em 1.2em;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  color: var(--color);
-  background: 
-     linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
-     linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
-  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
-  background-repeat: no-repeat;
-  box-shadow:
-    0 0 0 200px inset var(--s,#0000),
-    0 0 0 var(--border) inset var(--color);
-  clip-path: 
-      polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
-              100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
-             );
-  transition: color var(--t,0.3s), background-size 0.3s;
-}
-button:focus-visible {
-  outline-offset: calc(-1*var(--border));
-  outline: var(--border) solid #000c;
-  clip-path: none;
-  background-size: 0 0;
-}
-button:hover,
-button:active{
-  background-size: 100% 100%;
-  color: #fff;
-  --t: 0.2s 0.1s;
-}
 
-button:active {
-  --s: #0005;
-  transition: none;
-}
-  </style>
+  /* ============ Buttons ============ */
+  .multi-button {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.2em;
+  }
+
+  .modern-btn {
+    padding: 0.9em 1.4em;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #111;
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px solid #000;
+    border-radius: 0.6em;
+    backdrop-filter: blur(8px);
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+  }
+
+  .modern-btn:hover {
+    background: #000;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  .modern-btn:active {
+    transform: translateY(0);
+    opacity: 0.85;
+  }
+
+  /* ============ Dialog / Modal ============ */
+  .modern-dialog {
+    border: none;
+    border-radius: 1em;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 700px;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 1.5em;
+    border-bottom: 1px solid #000;
+  }
+
+  .modal-body {
+    padding: 1.5em;
+  }
+
+  .close {
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    transition: color 0.2s ease;
+  }
+
+  .close:hover {
+    color: crimson;
+  }
+
+  /* ============ Accessibility ============ */
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+  }
+</style>

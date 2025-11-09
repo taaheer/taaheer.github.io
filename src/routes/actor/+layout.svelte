@@ -27,15 +27,7 @@
     color: black;
     font-family: Arial, Helvetica, sans-serif;
   }
-  section {
-    max-width: 85%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 0.4em;
-  }
+
   :global(dialog) {
     background-color: white;
     border: none;
@@ -47,6 +39,8 @@
     background-color:rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
   }
+
+  
 
     @media (max-width: 849px) {
     section{

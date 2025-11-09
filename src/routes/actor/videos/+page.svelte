@@ -67,99 +67,102 @@
   
   
   
-  
-  <section>
-    <div class="page-title">
-      <h1>Video</h1>
-    </div>
-    <div class="video-container">
-      {#each videos as {name, link}}
-      <section class="video-box">
-        <h2>{name}</h2>
-        <YoutubeEmbed {link}></YoutubeEmbed>
-      </section>
-      {/each}
-    </div>
-  </section>
-  
+<section>
+  <div class="page-title">
+    <h1>Video Gallery</h1>
+  </div>
 
-  
-  <style>
-  .page-title{
+  <div class="video-container">
+    {#each videos as {name, link}}
+      <section class="video-box">
+        <div class="video-header">
+          <h2>{name}</h2>
+        </div>
+        <div class="video-content">
+          <YoutubeEmbed {link}></YoutubeEmbed>
+        </div>
+      </section>
+    {/each}
+  </div>
+</section>
+
+<style>
+  :root {
+    --accent-color: #0078ff;
+    --text-dark: #222;
+    --text-light: #666;
+    --border-radius: 12px;
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    --bg-light: #ffffff;
+  }
+
+  .page-title {
     display: flex;
     justify-content: center;
-    border-bottom: 0.16rem solid black;
-    margin-bottom: 1.8em;
+    align-items: center;
+    border-bottom: 2px solid var(--accent-color);
+    margin-bottom: 2em;
+    padding-bottom: 0.6em;
   }
-  h1, h2{
+
+  h1 {
+    letter-spacing: 0.3rem;
+    font-weight: 400;
+    color: var(--text-dark);
     text-transform: uppercase;
   }
 
-  h1{
-    letter-spacing: 0.4rem;
-    font-weight: 300;
-
+  h2 {
+    letter-spacing: 0.15rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    text-transform: uppercase;
   }
 
-  h2{
-    letter-spacing: 0.4rem;
-  }
-
-  section{
-    padding: 1em
-  }
   .video-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 20px;
-      padding: 20px;
-    }
-  
-    /* Box-like structure for each audio section */
-    .video-box {
-      border: 2px solid #ccc;
-      border-radius: 10px;
-      padding: 1em;
-      max-width: 300px;
-      min-width: 20em;
-      background-color: #f9f9f9;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-  
-    .video-box h2 {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-
-
-  section{
-    padding: 1em
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5em;
+    padding: 1em 2em;
   }
-  
-    /* Responsive behavior */
-    @media (max-width: 768px) {
-      .video-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
 
-      }
-  
-      .video-box {
-        width: 90%;
-        max-width: none;
-        min-width: 15em;
+  .video-box {
+    background: var(--bg-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
 
-      }
+  .video-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  .video-header {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 0.8em;
+    padding-bottom: 0.4em;
+  }
+
+  .video-content {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.5rem;
     }
-  
-    @media (min-width: 769px) {
-      .video-box {
-        width: calc(33.33% - 20px); /* Adjust this to control the number of items per row */
-      }
+
+    .video-container {
+      padding: 0.5em;
     }
 
-  </style>
-  
+    .video-box {
+      padding: 0.8em;
+    }
+  }
+</style>

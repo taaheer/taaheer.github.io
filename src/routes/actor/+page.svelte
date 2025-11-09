@@ -50,147 +50,142 @@
 
 <section class="main">
   <div class="text">
-    <h1>Name: {fullname}</h1>
-    <h2>Age: {age}</h2>
-    <h2>Height: {heightinCm} cm / {heightinFeetInches.feet} Feet {heightinFeetInches.inches} Inches</h2>
+    <h1>{fullname}</h1>
+    <h2>{age} years old</h2>
+    <h2>{heightinCm} cm / {heightinFeetInches.feet}' {heightinFeetInches.inches}”</h2>
     <h2>Languages: {languages}</h2>
-    <h2>Skills: Bike riding</h2>
+    <h2>Skills: Bike Riding</h2>
     <h2>Experience: Theatre</h2>
-    <address>Address: {address}</address>
-    <div class="contact">
-      {#each contact as contact}
-      {#if contact.type == "Email"}
-      <h3>{contact.type}: <a href={`mailto:${contact.value}`}>{contact.value}</a></h3>
-      {:else if contact.type == "Contact Number"}
-      <h3>{contact.type}: <a href={`tel:${contact.value}`}>{contact.value}</a></h3>
-      {/if}
-      {/each}
-    </div>
+    <h2>License & Passport: ✅</h2>
+    <address>{address}</address>
+
     <div class="multi-button">
       {#each pages as page}
         <button on:click={() => openLink(page.link)}>{page.title}</button>
-        {/each}
+      {/each}
     </div>
   </div>
+
   <div class="headshot">
     <enhanced:img src="./headshot/Taaheer-headshot.avif" alt="Taaheer Labbe Headshot" class="headshot-image"/>  
   </div>
-
 </section>
 
 <style>
-  .text {
-    margin: 1em;
-    display: grid;
-  }
-  h1, h2{
-    font-size: 1.5em;
-    margin-bottom: 0;
-  }
-  address{
-    font-size: 1.3em;
-    margin-top: 1em
+  :root {
+    --bg-color: #f7f9fb;
+    --text-color: #111;
+    --accent-color: #0078ff;
+    --border-color: #222;
+    --radius: 12px;
+    --transition: 0.3s ease;
   }
 
-  .contact > *{
-    font-size: 1em;
+  section.main {
+    display: flex;
+    align-items: stretch;
+    max-width: 950px;
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform var(--transition);
   }
-  img {
-    border-radius: 0 0.4em 0.4em 0;
-    max-width: 35em;
+
+  section.main:hover {
+    transform: translateY(-4px);
+  }
+
+  .text {
+    flex: 1;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 0.5em;
+  }
+
+  h2 {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin: 0.2em 0;
+  }
+
+  address {
+    font-style: normal;
+    margin-top: 1em;
+    font-size: 1em;
+    color: #555;
+  }
+ 
+  .multi-button {
+    display: flex;
+    margin-top: 1.5em;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+  }
+
+  .multi-button button {
+    flex: 1;
+    background: white;
+    color: var(--text-color);
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.8em 1em;
+    cursor: pointer;
+    transition: all var(--transition);
+  }
+
+  .multi-button button + button {
+    border-left: 1px solid var(--border-color);
+  }
+
+  .multi-button button:hover {
+    background: var(--accent-color);
+    color: white;
+  }
+
+  .headshot {
+    flex: 0.8;
+    display: flex;
+  }
+
+  .headshot-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  section{
-    display: flex;
-  }
-  :root {
-    --border-size: 0.125rem;
-    --duration: 250ms;
-    --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
-    --font-family: ;
-    --color-primary: white;
-    --color-secondary: black;
-    --color-tertiary: dodgerblue;
-    --shadow: rgba(0, 0, 0, 0.1);
-    --space: 0rem;
-  }
-  .multi-button {
-    display: flex;
-    width: 100%;
-    box-shadow: var(--shadow) 4px 4px;
-  }
-  .multi-button button {
-    flex-grow: 1;
-    cursor: pointer;
-    position: relative;
-    padding: calc(var(--space) / 1.125) var(--space) var(--space);
-    border: var(--border-size) solid black;
-    color: var(--color-secondary);
-    background-color: var(--color-primary);
-    font-size: 1.5rem;
-    font-family: var(--font-family);
-    text-shadow: var(--shadow) 2px 2px;
-    transition: flex-grow var(--duration) var(--ease);
-  }
-  .multi-button button + button {
-    border-left: var(--border-size) solid black;
-    margin-left: calc(var(--border-size) * -1);
-  }
-  .multi-button button:hover,
-  .multi-button button:focus {
-    flex-grow: 2;
-    color: white;
-    outline: none;
-    text-shadow: none;
-    background-color: var(--color-secondary);
-  }
-  .multi-button button:focus {
-    outline: var(--border-size) dashed var(--color-primary);
-    outline-offset: calc(var(--border-size) * -3);
-  }
-  .multi-button:hover button:focus:not(:hover) {
-    flex-grow: 1;
-    color: var(--color-secondary);
-    background-color: var(--color-primary);
-    outline-color: var(--color-tertiary);
-  }
-  .multi-button button:active {
-    transform: translateY(var(--border-size));
-  }
 
-  .contact a:hover{
-    background-color: black;
-    color: white;
-  }
-
-  h3{
-    font-size: 2em;
-  }
-
-  a{
-    color: black;
-  }
-
-  @media (max-width: 849px) {
-  :root {
-    --space: 0.5rem;
-  }
-
-    img{
-      border-radius: 0.5em 0.5em 0 0;
-    }
-  }
-  @media (max-width: 600px) {
-    section{
-      display: flex;
+  @media (max-width: 800px) {
+    section.main {
       flex-direction: column-reverse;
+      max-width: 100%;
     }
+
+    .headshot-image {
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+
     .text {
-    margin-top: 0em;
-    text-align: center;
+      text-align: center;
+      padding: 1.5em;
+    }
+
+    .multi-button {
+      flex-direction: column;
+    }
+
+    .multi-button button + button {
+      border-left: none;
+      border-top: 1px solid var(--border-color);
+    }
   }
-  }
-  
 </style>

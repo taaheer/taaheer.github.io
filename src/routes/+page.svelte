@@ -23,7 +23,7 @@
       "@type": "WebPage",
       "name": "Homepage - Taaheer Labbe",
       "url": "https://taaheer.github.io/",
-      "description": "Official website of Taaheer Labbe - actor, writer, and former software engineer.",
+      "description": "Official website of Taaheer Labbe - actor, writer, and software engineer.",
       "mainEntity": {
         "@type": "Person",
         "@id": "https://kg.google.com/g/11l2j8lsj8",
@@ -43,25 +43,16 @@
           "https://github.com/Taaheer",
           "https://linkedin.com/in/Taaheer-Labbe",
           "https://www.youtube.com/@taaheerlabbe",
-          "https://www.wikidata.org/wiki/Q136734120"
+          "https://www.wikidata.org/wiki/Q136734120",
+          "https://orcid.org/0009-0008-2499-3664"
         ],
         "description": "Taaheer Labbe is an Indian actor and writer with a background in software engineering."
       },
       "hasPart": [
         {
           "@type": "WebPage",
-          "name": "Resume",
-          "url": "https://taaheer.github.io/resume"
-        },
-        {
-          "@type": "WebPage",
           "name": "Actor Portfolio",
           "url": "https://taaheer.github.io/actor"
-        },
-        {
-          "@type": "WebPage",
-          "name": "Project List",
-          "url": "https://taaheer.github.io/projects"
         },
         {
           "@type": "WebPage",
