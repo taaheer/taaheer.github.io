@@ -111,6 +111,8 @@
           href={imageMap[_path.split('/').pop().replace(/\.[^/.]+$/, "")]}
           data-img={imageMap[_path.split('/').pop().replace(/\.[^/.]+$/, "")]}
           data-alt={_path.split('/').pop().replace(/\.[^/.]+$/, "")}
+          data-width="1080"
+          data-height="1920"
         >
           <enhanced:img
             class="photo"

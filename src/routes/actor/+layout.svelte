@@ -40,16 +40,26 @@
     backdrop-filter: blur(5px);
   }
 
-  :global(.bp-img img) {
-  object-fit: contain;
+
+:global(.bp-img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
-  max-width: 100%;
-  max-height: 100%;
+}
+
+:global(.bp-img img) {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background-color: black;
 }
 
 
     @media (max-width: 849px) {
+      
     section{
       display: flex;
       flex-direction: column-reverse;
