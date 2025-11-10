@@ -6,7 +6,7 @@
 
 
 <h1>{fullname}</h1>
-<h2 transition:blur>Are you still human at the core?</h2>
+<h2 transition:blur>Actor, Writer, Software Engineer</h2>
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');

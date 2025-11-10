@@ -3,7 +3,7 @@
     import { onMount } from 'svelte';
     import {title, meta, og, twitter, type} from "./heads.js";
     import Seo from "../../../lib/components/+Seo.svelte";
-    import BiggerPicture from "bigger-picture/svelte";
+    import BiggerPicture from "bigger-picture";
     import "bigger-picture/css";
 
     let bp;
@@ -110,8 +110,6 @@
         <a
           href={imageMap[_path.split('/').pop().replace(/\.[^/.]+$/, "")]}
           data-img={imageMap[_path.split('/').pop().replace(/\.[^/.]+$/, "")]}
-          data-height="2560"
-          data-width="1920"
           data-alt={_path.split('/').pop().replace(/\.[^/.]+$/, "")}
         >
           <enhanced:img
@@ -125,6 +123,7 @@
     {/each}
   </div>
 </section>
+
 
 <style>
   :root {
@@ -178,6 +177,7 @@
     transform: translateY(-5px);
     box-shadow: var(--hover-shadow);
   }
+  
 
   .photo {
     width: 100%;

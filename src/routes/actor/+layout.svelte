@@ -40,7 +40,14 @@
     backdrop-filter: blur(5px);
   }
 
-  
+  :global(.bp-img img) {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 
     @media (max-width: 849px) {
     section{
