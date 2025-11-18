@@ -25,28 +25,43 @@
 <Seo title={title} meta={meta} og={og} twitter={twitter} url={url}/>
 
 <svelte:head>
-    {@html `<script type="application/ld+json">
+  {@html `<script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "CreativeWork",
+      "@type": "ProfilePage",
       "name": "Actor Portfolio - Taaheer Labbe",
       "url": "https://taaheer.github.io/actor",
-      "creator": {
+      "description": "Acting portfolio showcasing Taaheer Labbe's roles, performances, and headshots.",
+      "image": "https://taaheer.github.io/Taaheer-headshot.avif",
+      "dateModified": "2025-11-18T13:39:00+05:30",
+      "mainEntity": {
         "@type": "Person",
         "@id": "https://kg.google.com/g/11l2j8lsj8",
-        "name": "Taaheer Labbe"
-      },
-      "genre": "Acting",
-      "about": {
-        "@type": "Person",
-        "@id": "https://kg.google.com/g/11l2j8lsj8"
-      },
-      "description": "Acting portfolio showcasing Taaheer Labbe's roles, performances, and headshots.",
-      "image": "https://taaheer.github.io/Taaheer-headshot.avif"
-
+        "name": "Taaheer Labbe",
+        "jobTitle": ["Actor", "Writer", "Software Engineer"],
+        "birthDate": "2004-09-17",
+        "gender": "Male",
+        "nationality": {
+          "@type": "Country",
+          "name": "India"
+        },
+        "knowsAbout": ["Acting", "Screenwriting", "Software Development"],
+        "knowsLanguage": ["English", "Hindi"],
+        "image": "https://taaheer.github.io/Taaheer-headshot.avif",
+        "url": "https://taaheer.github.io/",
+        "sameAs": [
+          "https://github.com/Taaheer",
+          "https://linkedin.com/in/Taaheer-Labbe",
+          "https://www.youtube.com/@taaheerlabbe",
+          "https://www.wikidata.org/wiki/Q136734120",
+          "https://orcid.org/0009-0008-2499-3664"
+        ],
+        "description": "Taaheer Labbe is an Indian actor and writer with a background in software engineering."
+      }
     }
     </script>`}
 </svelte:head>
+
 
 <section class="main">
   <div class="text">
@@ -54,7 +69,7 @@
     <h2>{age} years old</h2>
     <h2>{heightinCm} cm / {heightinFeetInches.feet}' {heightinFeetInches.inches}”</h2>
     <h2>Languages: {languages}</h2>
-    <h2>Skills: Bike Riding</h2>
+    <h2>Skills: Acting, Motorcycling, Computer Programming, Writing</h2>
     <h2>Experience: Theatre</h2>
     <h2>License & Passport: ✅</h2>
     <address>{address}</address>

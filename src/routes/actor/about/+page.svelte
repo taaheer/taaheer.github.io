@@ -50,6 +50,8 @@
     <p>
       {fullname} is an actor, writer, and software engineer. He has worked in numerous plays and shows, both on stage and behind the scenes, at venues like Prithvi Theatre, NCPA, Veda Kunba, and Artisan Coterie. Currently, he is writing his first feature film screenplay, <em>Orpheus</em>.
     </p>
+    
+    <a href="/Taaheer-Labbe-Resume.pdf">Resume</a>
 
     <div class="about-details">
       <h3>Born</h3>
