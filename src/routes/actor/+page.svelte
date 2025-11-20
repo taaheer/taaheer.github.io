@@ -38,6 +38,7 @@
         "@type": "Person",
         "@id": "https://kg.google.com/g/11l2j8lsj8",
         "name": "Taaheer Labbe",
+        "alternateName": "Taaheer",
         "jobTitle": ["Actor", "Writer", "Software Engineer"],
         "birthDate": "2004-09-17",
         "gender": "Male",

@@ -40,7 +40,7 @@
         "@id": "https://kg.google.com/g/11l2j8lsj8"
       },
       "genre": "Acting",
-      "about": "Portfolio showcasing acting roles, headshots."
+      "description": "About Taaheer Labbe, his resume and ways to contact him."
     }
     </script>`}
 </svelte:head>
