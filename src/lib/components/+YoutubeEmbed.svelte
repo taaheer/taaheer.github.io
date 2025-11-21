@@ -7,7 +7,13 @@
 
     $: {
       const url = new URL(link);
-      videoId = url.searchParams.get("v") || "";
+      let id = url.searchParams.get("v");
+
+      if (!id) {
+        id = url.pathname.replace("/", "");
+      }
+      
+      videoId = id;
       thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
       autoplayUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&playsinline=1`;
     }
